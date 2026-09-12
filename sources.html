@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sources &amp; receipts — Pricing-Reversal Watch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="sources">
+  <header class="site-header">
+    <a class="brand" href="index.html">Pricing-Reversal Watch</a>
+    <nav aria-label="Main navigation">
+      <a href="methodology.html">Methodology</a>
+      <a href="sources.html">Sources &amp; receipts</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Audit trail</p>
+      <h1>Sources &amp; receipts</h1>
+      <p class="lede">
+        Every monitored page, its fetch result, and the SHA-256 receipt of the exact bytes
+        captured. Raw HTML captures are published under <span class="mono-hint">data/raw/</span>
+        so every quote on this site can be re-checked against its source.
+      </p>
+      <p class="callout-note" id="sources-coverage"></p>
+    </section>
+
+    <section>
+      <h2>Captures</h2>
+      <div id="sources-table" class="table-wrap"></div>
+      <p class="callout-note" id="sources-summary"></p>
+    </section>
+
+    <section>
+      <h2>Reading a receipt</h2>
+      <ul class="plain-list notes">
+        <li><strong>captured</strong> — the source answered at build time and its bytes were saved and hashed.</li>
+        <li><strong>stale capture</strong> — the source failed at build time; the newest available capture is shown and the failure is recorded in the dataset.</li>
+        <li><strong>unreachable</strong> — no capture exists; the source is a documented gap (transport errors recorded).</li>
+        <li><strong>SHA-256</strong> — identifies the exact fetch. Re-downloading a page can produce different bytes (per-request markup); compare against the published capture file, not a fresh download.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Declared values, not verified ones. <a href="methodology.html">Methodology</a> · <a href="index.html">Trail</a></p>
+    <p>
+      <a href="https://github.com/GreatTombProductions/pricing-reversal-watch">Source code</a> ·
+      <a href="https://github.com/GreatTombProductions/quest-board/issues/new?title=pricing-reversal-watch%3A%20%5Bbrief%20description%5D&amp;labels=feedback%2Cpricing-reversal-watch">Feedback</a>
+    </p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

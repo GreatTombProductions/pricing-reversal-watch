@@ -1,0 +1,704 @@
+{
+ "v": 1,
+ "tool": "pricing-reversal-watch",
+ "generated_at": "2026-09-12T08:44:51+00:00",
+ "captured": "2026-09-12",
+ "currency": "USD",
+ "unit": "per 1,000,000 tokens (MTok) unless noted",
+ "coverage_statement": "This watch holds vendor-page captures from 2026-09-06 onward, plus dated monitoring notes from 2026-07-19. \"No reversal found\" is claimable only over the capture interval. Vendors without a capture are documented gaps, never clean.",
+ "receipts": [
+  {
+   "id": "anthropic-docs",
+   "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+   "label": "Anthropic model pricing (docs)",
+   "vendor": "anthropic",
+   "fetch_status": "ok",
+   "http_code": 200,
+   "transport": "urllib",
+   "attempted_at": "2026-09-12T08:44:51+00:00",
+   "attempts": [
+    {
+     "transport": "urllib",
+     "http_code": 200
+    }
+   ],
+   "bytes": 564429,
+   "sha256": "8654269457c3b210b098a06091f6131f2e169f2d9973a9f9dd2ce28b1dceb898",
+   "capture_state": "fresh",
+   "captured_at": "2026-09-12T08:44:51+00:00",
+   "file": "data/raw/2026-09-12-platform.claude.com-pricing.html",
+   "capture_id": "anthropic-docs-2026-09-12",
+   "parsed": true
+  },
+  {
+   "id": "claude-com",
+   "url": "https://claude.com/pricing",
+   "label": "Anthropic boundary pricing page",
+   "vendor": "anthropic",
+   "fetch_status": "ok",
+   "http_code": 200,
+   "transport": "urllib",
+   "attempted_at": "2026-09-12T08:44:51+00:00",
+   "attempts": [
+    {
+     "transport": "urllib",
+     "http_code": 200
+    }
+   ],
+   "bytes": 1147265,
+   "sha256": "491d3a818a078febd11c582d0cdfb6f3235390ff54ba7e468f4d885fe1ad7396",
+   "capture_state": "fresh",
+   "captured_at": "2026-09-12T08:44:51+00:00",
+   "file": "data/raw/2026-09-12-claude.com-pricing.html",
+   "capture_id": "claude-com-2026-09-12",
+   "parsed": true
+  },
+  {
+   "id": "deepseek-pricing",
+   "url": "https://api-docs.deepseek.com/quick_start/pricing/",
+   "label": "DeepSeek Models & Pricing",
+   "vendor": "deepseek",
+   "fetch_status": "ok",
+   "http_code": 200,
+   "transport": "urllib",
+   "attempted_at": "2026-09-12T08:44:51+00:00",
+   "attempts": [
+    {
+     "transport": "urllib",
+     "http_code": 200
+    }
+   ],
+   "bytes": 23359,
+   "sha256": "755aa9b488d1185cba016ca4de3b3b6b8f593f5e13e5f9f961305289a5c8d242",
+   "capture_state": "fresh",
+   "captured_at": "2026-09-12T08:44:51+00:00",
+   "file": "data/raw/2026-09-12-api-docs.deepseek.com-pricing.html",
+   "capture_id": "deepseek-pricing-2026-09-12",
+   "parsed": true
+  },
+  {
+   "id": "deepseek-updates",
+   "url": "https://api-docs.deepseek.com/updates/",
+   "label": "DeepSeek API changelog",
+   "vendor": "deepseek",
+   "fetch_status": "ok",
+   "http_code": 200,
+   "transport": "urllib",
+   "attempted_at": "2026-09-12T08:44:51+00:00",
+   "attempts": [
+    {
+     "transport": "urllib",
+     "http_code": 200
+    }
+   ],
+   "bytes": 50934,
+   "sha256": "da7f5c4919ed8874ff575dc1c7c91da36e5b141a1b17b43309f3d75156469185",
+   "capture_state": "fresh",
+   "captured_at": "2026-09-12T08:44:51+00:00",
+   "file": "data/raw/2026-09-12-api-docs.deepseek.com-updates.html",
+   "capture_id": "deepseek-updates-2026-09-12",
+   "parsed": true
+  },
+  {
+   "id": "openai-api-pricing",
+   "url": "https://openai.com/api/pricing/",
+   "label": "OpenAI API pricing",
+   "vendor": "openai",
+   "fetch_status": "http_error",
+   "http_code": 403,
+   "transport": null,
+   "attempted_at": "2026-09-12T08:44:51+00:00",
+   "attempts": [
+    {
+     "transport": "urllib",
+     "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+     "transport": "curl",
+     "http_code": 403
+    }
+   ],
+   "error": "HTTPError: HTTP Error 403: Forbidden; HTTP 403",
+   "capture_state": "none"
+  }
+ ],
+ "vendors": {
+  "anthropic": {
+   "name": "Anthropic",
+   "status": "captured",
+   "pricing_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+   "boundary_url": "https://claude.com/pricing",
+   "captures": [
+    "anthropic-docs",
+    "claude-com"
+   ],
+   "models": [
+    {
+     "name": "Claude Fable 5.1",
+     "input": 10.0,
+     "cache_write_5m": 12.5,
+     "cache_write_1h": 20.0,
+     "cache_hit": 0.25,
+     "output": 50.0,
+     "limited": false,
+     "retired_note": null
+    },
+    {
+     "name": "Claude Mythos 5.1 ( limited availability )",
+     "input": 10.0,
+     "cache_write_5m": 12.5,
+     "cache_write_1h": 20.0,
+     "cache_hit": 0.25,
+     "output": 50.0,
+     "limited": true,
+     "retired_note": null
+    },
+    {
+     "name": "Claude Fable 5",
+     "input": 10.0,
+     "cache_write_5m": 12.5,
+     "cache_write_1h": 20.0,
+     "cache_hit": 1.0,
+     "output": 50.0,
+     "limited": false,
+     "retired_note": null
+    },
+    {
+     "name": "Claude Mythos 5 ( limited availability )",
+     "input": 10.0,
+     "cache_write_5m": 12.5,
+     "cache_write_1h": 20.0,
+     "cache_hit": 1.0,
+     "output": 50.0,
+     "limited": true,
+     "retired_note": null
+    },
+    {
+     "name": "Claude Opus 5",
+     "input": 5.0,
+     "cache_write_5m": 6.25,
+     "cache_write_1h": 10.0,
+     "cache_hit": 0.5,
+     "output": 25.0,
+     "limited": false,
+     "retired_note": null
+    },
+    {
+     "name": "Claude Opus 4.8",
+     "input": 5.0,
+     "cache_write_5m": 6.25,
+     "cache_write_1h": 10.0,
+     "cache_hit": 0.5,
+     "output": 25.0,
+     "limited": false,
+     "retired_note": null
+    },
+    {
+     "name": "Claude Opus 4.7",
+     "input": 5.0,
+     "cache_write_5m": 6.25,
+     "cache_write_1h": 10.0,
+     "cache_hit": 0.5,
+     "output": 25.0,
+     "limited": false,
+     "retired_note": null
+    },
+    {
+     "name": "Claude Opus 4.6",
+     "input": 5.0,
+     "cache_write_5m": 6.25,
+     "cache_write_1h": 10.0,
+     "cache_hit": 0.5,
+     "output": 25.0,
+     "limited": false,
+     "retired_note": null
+    },
+    {
+     "name": "Claude Opus 4.5",
+     "input": 5.0,
+     "cache_write_5m": 6.25,
+     "cache_write_1h": 10.0,
+     "cache_hit": 0.5,
+     "output": 25.0,
+     "limited": false,
+     "retired_note": null
+    },
+    {
+     "name": "Claude Opus 4.1 ( retired, except on Bedrock and Google Cloud )",
+     "input": 15.0,
+     "cache_write_5m": 18.75,
+     "cache_write_1h": 30.0,
+     "cache_hit": 1.5,
+     "output": 75.0,
+     "limited": false,
+     "retired_note": "retired, except on Bedrock and Google Cloud "
+    },
+    {
+     "name": "Claude Opus 4 ( retired, except on Google Cloud )",
+     "input": 15.0,
+     "cache_write_5m": 18.75,
+     "cache_write_1h": 30.0,
+     "cache_hit": 1.5,
+     "output": 75.0,
+     "limited": false,
+     "retired_note": "retired, except on Google Cloud "
+    },
+    {
+     "name": "Claude Sonnet 5",
+     "input": 2.0,
+     "cache_write_5m": 2.5,
+     "cache_write_1h": 4.0,
+     "cache_hit": 0.2,
+     "output": 10.0,
+     "limited": false,
+     "retired_note": null
+    },
+    {
+     "name": "Claude Sonnet 4.6",
+     "input": 3.0,
+     "cache_write_5m": 3.75,
+     "cache_write_1h": 6.0,
+     "cache_hit": 0.3,
+     "output": 15.0,
+     "limited": false,
+     "retired_note": null
+    },
+    {
+     "name": "Claude Sonnet 4.5",
+     "input": 3.0,
+     "cache_write_5m": 3.75,
+     "cache_write_1h": 6.0,
+     "cache_hit": 0.3,
+     "output": 15.0,
+     "limited": false,
+     "retired_note": null
+    },
+    {
+     "name": "Claude Sonnet 4 ( retired, except on Bedrock and Google Cloud )",
+     "input": 3.0,
+     "cache_write_5m": 3.75,
+     "cache_write_1h": 6.0,
+     "cache_hit": 0.3,
+     "output": 15.0,
+     "limited": false,
+     "retired_note": "retired, except on Bedrock and Google Cloud "
+    },
+    {
+     "name": "Claude Haiku 4.5",
+     "input": 1.0,
+     "cache_write_5m": 1.25,
+     "cache_write_1h": 2.0,
+     "cache_hit": 0.1,
+     "output": 5.0,
+     "limited": false,
+     "retired_note": null
+    },
+    {
+     "name": "Claude Haiku 3.5 ( retired, except on Bedrock and Google Cloud )",
+     "input": 0.8,
+     "cache_write_5m": 1.0,
+     "cache_write_1h": 1.6,
+     "cache_hit": 0.08,
+     "output": 4.0,
+     "limited": false,
+     "retired_note": "retired, except on Bedrock and Google Cloud "
+    }
+   ],
+   "callouts_featured": [
+    "The $2/$10 per million input/output token pricing for Claude Sonnet 5, announced at launch as introductory pricing through August 31, 2026, is now the standard price. The previously scheduled increase to $3/$15 per million input/output tokens on September 1, 2026 will not occur."
+   ],
+   "callouts_total": 12,
+   "boundary_blocks": [
+    {
+     "name": "Fable",
+     "input": 10.0,
+     "output": 50.0,
+     "context": "es Team Enterprise (self-serve) Enterprise (sales-assisted) Fable No Yes Yes Opus Yes Yes Yes Sonnet Yes Yes Yes Haiku Yes Yes Yes Context window More information 200k 500k on default model 500k on default model Extra us"
+    },
+    {
+     "name": "Opus 5",
+     "input": 5.0,
+     "output": 25.0,
+     "context": "/ MTok Prompt caching Read $0.25 / MTok Write $12.50 / MTok Opus 5 Ideal for complex agentic coding and enterprise work Input $5 / MTok Output $25 / MTok Prompt caching Read $0.50 / MTok Write $6.25 / MTok Sonnet 5 High-"
+    },
+    {
+     "name": "Sonnet 5",
+     "input": 2.0,
+     "output": 10.0,
+     "context": " / MTok Prompt caching Read $0.50 / MTok Write $6.25 / MTok Sonnet 5 High-performance model for coding and agents Input $2 / MTok Output $10 / MTok Prompt caching Read $0.20 / MTok Write $2.50 / MTok Haiku 4.5 Fastest, m"
+    },
+    {
+     "name": "Haiku 4.5",
+     "input": 1.0,
+     "output": 5.0,
+     "context": " / MTok Prompt caching Read $0.20 / MTok Write $2.50 / MTok Haiku 4.5 Fastest, most cost-efficient model Input $1 / MTok Output $5 / MTok Prompt caching Read $0.10 / MTok Write $1.25 / MTok For workloads that need to run"
+    }
+   ]
+  },
+  "deepseek": {
+   "name": "DeepSeek",
+   "status": "captured",
+   "pricing_url": "https://api-docs.deepseek.com/quick_start/pricing/",
+   "updates_url": "https://api-docs.deepseek.com/updates/",
+   "captures": [
+    "deepseek-pricing",
+    "deepseek-updates"
+   ],
+   "models": [
+    {
+     "id": "deepseek-flash",
+     "version": "DeepSeek-V4.1-Flash",
+     "rates": {
+      "off_peak": {
+       "cache_hit": 0.003,
+       "cache_miss": 0.15,
+       "output": 0.6
+      },
+      "peak": {
+       "cache_hit": 0.006,
+       "cache_miss": 0.3,
+       "output": 1.2
+      }
+     },
+     "concurrency_limit": "2500"
+    },
+    {
+     "id": "deepseek-v4-pro",
+     "version": "DeepSeek-V4-Pro-0813",
+     "rates": {
+      "off_peak": {
+       "cache_hit": 0.022,
+       "cache_miss": 0.66,
+       "output": 1.98
+      },
+      "peak": {
+       "cache_hit": 0.044,
+       "cache_miss": 1.32,
+       "output": 3.96
+      }
+     },
+     "concurrency_limit": "500"
+    }
+   ],
+   "schedule_quote": "Peak hours are 01:00 - 04:00 and 06:00 - 10:00 UTC, Monday through Friday (all other hours are off-peak).",
+   "footnotes": [
+    {
+     "n": 1,
+     "text": "Use deepseek-flash as the model name. The legacy names deepseek-v4-flash and deepseek-v4-flash-vision-exp are still accepted, but the corresponding models have been retired, their requests are served by the DeepSeek-V4.1-Flash model and billed at the Flash price."
+    },
+    {
+     "n": 2,
+     "text": "In response to user demand, we have decided to continue providing API services for DeepSeek V4 Pro after September 14, 2026, with the billing method remaining unchanged. We will provide further notice should there be any changes. Thank you for your understanding and support!"
+    },
+    {
+     "n": 3,
+     "text": "Off-peak rates are half of the peak rates. Peak hours are 01:00 - 04:00 and 06:00 - 10:00 UTC, Monday through Friday (all other hours are off-peak)."
+    },
+    {
+     "n": 4,
+     "text": "For more details on concurrency limits, please refer to Rate Limit & Isolation . Deduction Rules The expense = number of tokens × price. The corresponding fees will be directly deducted from your topped-up balance or granted balance, with a preference for using the granted balance first when both balances are available. Product prices may vary and DeepSeek reserves the right to adjust them. We recommend topping up based on your actual usage and regularly checking this page for the most recent pricing information. Previous Your First API Call Next Token & Token Usage Model Details Deduction Rules WeChat Official Account Community Email Discord Twitter More GitHub Copyright © 2026 DeepSeek, Inc."
+    }
+   ],
+   "changelog": [
+    {
+     "date": "2026-09-10",
+     "title": "DeepSeek-V4.1-Flash Release",
+     "excerpt": "Date: 2026-09-10 DeepSeek-V4.1-Flash Release Today, we officially release the DeepSeek-V4.1-Flash model. It is the smallest model in our new architecture family, with native multimodal visual understanding. The new architecture is designed for a higher capability ceiling, faster inference, higher throughput, and scaling to larger models. GPQA Diamond: 90.9 HLE: 36.8 (39.1*) Codeforces (Rating): 3471 MathArena Apex: 65.6 Terminal-Bench 2.1: 90.6 Terminal-Bench 3.0: 30.0 Terminal-Bench 4.0: 31.2 D"
+    },
+    {
+     "date": "2026-08-21",
+     "title": "DeepSeek-V4-Flash-Vision-Exp Release",
+     "excerpt": "Date: 2026-08-21 DeepSeek-V4-Flash-Vision-Exp Release Today, the new multimodal vision understanding model DeepSeek-V4-Flash-Vision-Exp is now available on the DeepSeek API platform. This is an experimental model that can be accessed by setting model='deepseek-v4-flash-vision-exp' . Terminal Bench 2.1: 83.9 NL2Repo: 57.7 DeepSWE: 59.3 DSBench-Hard: 63.6 AutomationBench (Public): 25.7 ApexBench (Pass@1): 36.5 Agents' Last Exam: 27.3 Chartography: 64.3 ZeroBench (Pass@5): 35.0 * For the Code Agent"
+    },
+    {
+     "date": "2026-08-13",
+     "title": "DeepSeek-V4-Pro Update",
+     "excerpt": "Date: 2026-08-13 DeepSeek-V4-Pro Update The GA release of DeepSeek-V4-Pro has been rolled out on the APP, Web, and API. The API calling method remains unchanged — simply set the model name to deepseek-v4-pro to use the latest version. Significantly enhanced Agent capabilities The GA version of DeepSeek V4 Pro greatly enhances agent capabilities, with particularly significant performance improvements in production environments. HLE (wo / w tools): 42.7/60.0 Terminal Bench 2.1: 87.9 NL2Repo: 61.5 "
+    },
+    {
+     "date": "2026-07-31",
+     "title": "DeepSeek-V4-Flash Update",
+     "excerpt": "Date: 2026-07-31 DeepSeek-V4-Flash Update The official release of the DeepSeek-V4-Flash API is now in public beta. The API calling method remains unchanged — simply set the model name to deepseek-v4-flash to use the latest version. Significantly enhanced agent capabilities, with benchmark results far exceeding V4-Pro-Preview: Terminal Bench 2.1: 82.7 NL2Repo: 54.2 Cybergym: 76.7 DeepSWE: 54.4 Toolathlon verified: 70.3 Agent Last Exam: 25.2 Automation Bench (Public): 25.1 DSBench-FullStack: 68.7 "
+    },
+    {
+     "date": "2026-04-24",
+     "title": "DeepSeek-V4",
+     "excerpt": "Date: 2026-04-24 DeepSeek-V4 The DeepSeek API now supports V4-Pro and V4-Flash, available via both the OpenAI ChatCompletions interface and the Anthropic interface. To access the new models, the base_url remains unchanged, and the model parameter should be set to deepseek-v4-pro or deepseek-v4-flash . The two legacy API model names, deepseek-chat and deepseek-reasoner , will be discontinued in three months (2026-07-24). During the current period, these two model names point to the non-thinking m"
+    },
+    {
+     "date": "2025-12-01",
+     "title": "DeepSeek-V3.2",
+     "excerpt": "Date: 2025-12-01 DeepSeek-V3.2 Both deepseek-chat and deepseek-reasoner have been upgraded to DeepSeek-V3.2. deepseek-chat corresponds to DeepSeek-V3.2's non-thinking mode deepseek-reasoner corresponds to DeepSeek-V3.2's thinking mode DeepSeek-V3.2-Speciale DeepSeek-V3.2-Speciale is served via a temporary endpoint: base_url=\" https://api.deepseek.com/v3.2_speciale_expires_on_20251215 \". Same pricing as V3.2, no tool calls, available until Dec 15th, 2025, 15:59 (UTC Time). For more details, pleas"
+    },
+    {
+     "date": "2025-09-29",
+     "title": "DeepSeek-V3.2-Exp",
+     "excerpt": "Date: 2025-09-29 DeepSeek-V3.2-Exp Both deepseek-chat and deepseek-reasoner have been upgraded to DeepSeek-V3.2-Exp. deepseek-chat corresponds to DeepSeek-V3.2-Exp's non-thinking mode deepseek-reasoner corresponds to DeepSeek-V3.2-Exp's thinking mode For more details, please refer to this documentation ."
+    },
+    {
+     "date": "2025-09-22",
+     "title": "DeepSeek-V3.1-Terminus",
+     "excerpt": "Date: 2025-09-22 DeepSeek-V3.1-Terminus Both deepseek-chat and deepseek-reasoner have been upgraded to DeepSeek-V3.1-Terminus. deepseek-chat corresponds to DeepSeek-V3.1-Terminus's non-thinking mode , while deepseek-reasoner corresponds to its thinking mode . This update maintains the model's original capabilities while addressing issues reported by users, including: Language consistency: Reduced occurrences of Chinese-English mixing and occasional abnormal characters; Agent capabilities: Furthe"
+    },
+    {
+     "date": "2025-08-21",
+     "title": "DeepSeek-V3.1",
+     "excerpt": "Date: 2025-08-21 DeepSeek-V3.1 Both deepseek-chat and deepseek-reasoner have been upgraded to DeepSeek-V3.1. deepseek-chat corresponds to DeepSeek-V3.1's non-thinking mode , while deepseek-reasoner corresponds to its thinking mode . Key updates in DeepSeek-V3.1: Hybrid reasoning architecture : A single model supports both thinking mode and non-thinking mode Improved reasoning efficiency : Compared to DeepSeek-R1-0528, DeepSeek-V3.1-Think provides answers in significantly less time Enhanced agent"
+    },
+    {
+     "date": "2025-05-28",
+     "title": "deepseek-reasoner",
+     "excerpt": "Date: 2025-05-28 deepseek-reasoner deepseek-reasoner Model Upgraded to DeepSeek-R1-0528: Enhanced Reasoning Capabilities Significant benchmark improvements (Pass@1) AIME 2025: 70.0 → 87.5 (+17.5) GPQA: 71.5 → 81.0 (+9.5) LCB_v6: 63.5 → 73.3 (+9.8) Aider: 57.0 → 71.6 (+14.6) Note: Complex reasoning tasks may consume more tokens compared to legacy R1 version. Optimized Front-end Development Generated web pages and games now feature improved aesthetics. Reduced Hallucinations Significantly suppress"
+    }
+   ]
+  },
+  "openai": {
+   "name": "OpenAI",
+   "status": "gap",
+   "gap_reason": "Both transports were blocked at the latest capture attempt (HTTP 403). No vendor page is held; provisional items below are third-party reports, not vendor-verified.",
+   "transport_errors": [
+    "urllib: HTTPError: HTTP Error 403: Forbidden",
+    "curl: HTTP 403"
+   ],
+   "attempted_at": "2026-09-12T08:44:51+00:00"
+  },
+  "google": {
+   "name": "Google / Vertex",
+   "status": "gap",
+   "gap_reason": "No capture yet — documented gap, not clean."
+  },
+  "mistral": {
+   "name": "Mistral",
+   "status": "gap",
+   "gap_reason": "No capture yet — documented gap, not clean."
+  },
+  "kimi": {
+   "name": "Kimi / Moonshot",
+   "status": "gap",
+   "gap_reason": "No capture yet — documented gap, not clean."
+  }
+ },
+ "events": [
+  {
+   "id": "deepseek-v41-flash-cut",
+   "vendor": "deepseek",
+   "family": "deepseek-flash",
+   "kind": "price_cut",
+   "title": "DeepSeek-V4.1-Flash released — Flash prices reduced, legacy names retired",
+   "summary": "DeepSeek-V4.1-Flash released and Flash API prices were reduced: off-peak cache-hit $0.007 → $0.003 (−57%), cache-miss $0.22 → $0.15 (−32%), output $0.66 → $0.60 (−9%). The legacy model names deepseek-v4-flash and deepseek-v4-flash-vision-exp were retired and are temporarily routed to the new model. Pro rates were unchanged in the same window. This partially reverses the August escalation for Flash.",
+   "announced": "2026-09-10",
+   "observed": "2026-09-10",
+   "effective": "2026-09-10",
+   "status": "executed",
+   "old_value": "flash off-peak $0.007 / $0.22 / $0.66 (cache-hit / cache-miss / output, per MTok)",
+   "new_value": "flash off-peak $0.003 / $0.15 / $0.60 (peak = 2×)",
+   "evidence": [
+    {
+     "type": "capture",
+     "capture": "deepseek-updates-2026-09-12",
+     "quote": "Today, we officially release the DeepSeek-V4.1-Flash model. It is the smallest model in our new architecture family, with native multimodal visual understanding.",
+     "label": "changelog entry, 2026-09-10"
+    },
+    {
+     "type": "capture",
+     "capture": "deepseek-updates-2026-09-12",
+     "quote": "With the release of DeepSeek-V4.1-Flash, API prices have been reduced accordingly."
+    },
+    {
+     "type": "capture",
+     "capture": "deepseek-updates-2026-09-12",
+     "quote": "The previous-generation models V4 Flash and V4 Flash Vision Exp have been retired; for compatibility, the model names deepseek-v4-flash and deepseek-v4-flash-vision-exp are temporarily routed to V4.1 Flash.",
+     "label": "legacy-name retirement"
+    },
+    {
+     "type": "values",
+     "capture": "deepseek-pricing-2026-09-12",
+     "text": "Parsed from the live pricing table at capture: flash off-peak cache-hit $0.003, cache-miss $0.15, output $0.60 per MTok; peak 2×."
+    },
+    {
+     "type": "tracking_note",
+     "date": "2026-08-31",
+     "text": "Monitoring note: prior basis as of 2026-08-31 — flash off-peak $0.007 / $0.22 / $0.66, unchanged since the August 16 escalation."
+    }
+   ],
+   "notes": [
+    "Round trip visible end-to-end: flat → August increase → September cut. Flash off-peak cache-miss $0.14 → $0.22 → $0.15; output $0.28 → $0.66 → $0.60."
+   ]
+  },
+  {
+   "id": "deepseek-v4pro-continuation",
+   "vendor": "deepseek",
+   "family": "deepseek-v4-pro",
+   "kind": "continuation_notice",
+   "title": "DeepSeek V4 Pro API services continue past September 14",
+   "summary": "The vendor announced that V4 Pro API services will continue after September 14, 2026, with billing unchanged, citing user demand. The notice references a prior plan to stop serving V4 Pro; the original discontinuation notice is not in this watch's captures — that gap is stated rather than filled.",
+   "announced": "2026-09-10",
+   "observed": "2026-09-10",
+   "effective": null,
+   "status": "active",
+   "old_value": "planned stop of V4 Pro API service after 2026-09-14 (per vendor notice)",
+   "new_value": "services continue past 2026-09-14, billing method unchanged",
+   "evidence": [
+    {
+     "type": "capture",
+     "capture": "deepseek-updates-2026-09-12",
+     "quote": "In response to user demand, we have decided to continue providing API services for DeepSeek V4 Pro after September 14, 2026, with the billing method remaining unchanged."
+    },
+    {
+     "type": "capture",
+     "capture": "deepseek-pricing-2026-09-12",
+     "quote": "In response to user demand, we have decided to continue providing API services for DeepSeek V4 Pro after September 14, 2026",
+     "label": "same notice carried on the pricing page"
+    }
+   ],
+   "notes": [
+    "Documented gap: the original discontinuation notice (implying a September 14 stop) is not held here, so the change cannot be quoted from both sides."
+   ]
+  },
+  {
+   "id": "anthropic-sonnet5-increase-cancelled",
+   "vendor": "anthropic",
+   "family": "Claude Sonnet 5",
+   "kind": "scheduled_increase_cancelled",
+   "title": "Scheduled increase cancelled — $2/$10 becomes the standard price",
+   "summary": "The previously scheduled increase to $3/$15 on September 1, 2026 did not occur. $2/$10 is now the standard price. No announcement date for the cancellation is published on the pages held here; the change was first visible in captures on 2026-08-29 and confirmed on 2026-08-31. Monitoring as of 2026-08-21 still listed the increase as scheduled — the reversal appeared quietly.",
+   "announced": null,
+   "observed": "2026-08-29",
+   "confirmed": "2026-08-31",
+   "effective": null,
+   "status": "cancelled",
+   "old_value": "$3 / $15 scheduled for 2026-09-01",
+   "new_value": "increase will not occur — $2 / $10 is the standard price",
+   "evidence": [
+    {
+     "type": "capture",
+     "capture": "anthropic-docs-2026-09-12",
+     "quote": "The $2/$10 per million input/output token pricing for Claude Sonnet 5, announced at launch as introductory pricing through August 31, 2026, is now the standard price. The previously scheduled increase to $3/$15 per million input/output tokens on September 1, 2026 will not occur."
+    },
+    {
+     "type": "capture",
+     "capture": "anthropic-docs-2026-09-06",
+     "quote": "The previously scheduled increase to $3/$15 per million input/output tokens on September 1, 2026 will not occur",
+     "label": "earlier capture (2026-09-06), same text"
+    },
+    {
+     "type": "capture",
+     "capture": "claude-com-2026-09-12",
+     "quote": "Sonnet 5 High-performance model for coding and agents Input $2 / MTok Output $10 / MTok Prompt caching Read $0.20 / MTok Write $2.50 / MTok",
+     "label": "boundary page — $2/$10, no introductory label"
+    },
+    {
+     "type": "tracking_note",
+     "date": "2026-08-31",
+     "text": "Monitoring note: dual anchor confirmed (pricing docs callout + boundary page). Through 2026-08-21 the increase was still listed as scheduled; page change first noticed 2026-08-29."
+    }
+   ],
+   "notes": [
+    "The cancellation is the exact shape this watch exists for: a scheduled, announced increase that was quietly rescinded, visible only to someone re-reading the pricing page."
+   ]
+  },
+  {
+   "id": "deepseek-peak-offpeak-executed",
+   "vendor": "deepseek",
+   "family": "deepseek-flash / deepseek-v4-pro",
+   "kind": "scheduled_increase_executed",
+   "title": "Peak/off-peak billing goes live — Flash components up 1.57×–5×",
+   "summary": "DeepSeek replaced flat token pricing with a peak/off-peak schedule effective 2026-08-16 16:00 UTC. The notice was published in advance and the schedule took effect on time. This is the executed-increase case that the cancellation above contrasts with — and it is the basis the September cut (below) moves down from.",
+   "announced": "2026-08-15",
+   "observed": "2026-08-15",
+   "effective": "2026-08-16T16:00:00Z",
+   "status": "executed",
+   "old_value": "flat pricing — flash $0.0028 / $0.14 / $0.28; pro $0.003625 / $0.435 / $0.87 (cache-hit / cache-miss / output, per MTok)",
+   "new_value": "off-peak — flash $0.007 / $0.22 / $0.66; pro $0.022 / $0.66 / $1.98 (peak = 2×); new weekday peak windows 01:00–04:00 and 06:00–10:00 UTC",
+   "evidence": [
+    {
+     "type": "capture",
+     "capture": "deepseek-pricing-2026-09-12",
+     "quote": "Off-peak rates are half of the peak rates. Peak hours are 01:00 - 04:00 and 06:00 - 10:00 UTC, Monday through Friday (all other hours are off-peak).",
+     "label": "current schedule (still in effect at capture date)"
+    },
+    {
+     "type": "tracking_note",
+     "date": "2026-08-15",
+     "text": "Monitoring note: formal notice recorded — flat pricing replaced by peak/off-peak billing effective 2026-08-16 16:00 UTC; Flash components increased 1.57×–5× versus the flat basis."
+    },
+    {
+     "type": "tracking_note",
+     "date": "2026-08-28",
+     "text": "Archived rate snapshot: off-peak/peak rates with weekday windows, effective-dated; the vendor transition notice read \"The new prices take effect at 16:00 UTC on August 16, 2026.\""
+    }
+   ],
+   "notes": [
+    "Advance notice given; schedule executed on time. Components above 2× met a materiality threshold that monitoring had flagged in advance."
+   ]
+  },
+  {
+   "id": "anthropic-sonnet5-intro",
+   "vendor": "anthropic",
+   "family": "Claude Sonnet 5",
+   "kind": "intro_pricing",
+   "title": "Sonnet 5 launches on temporary introductory pricing",
+   "summary": "Sonnet 5 launched with $2/$10 per MTok labeled as introductory pricing through August 31, 2026, with a standard price of $3/$15 to follow. The temporary label is the setup for the reversal below: the increase was scheduled, announced, and then cancelled before it took effect.",
+   "announced": "2026-06-30",
+   "observed": "2026-07-19",
+   "effective": "2026-06-30",
+   "status": "resolved",
+   "old_value": null,
+   "new_value": "$2 / $10 per MTok introductory through 2026-08-31; $3 / $15 standard to follow",
+   "evidence": [
+    {
+     "type": "capture",
+     "capture": "anthropic-docs-2026-09-12",
+     "quote": "announced at launch as introductory pricing through August 31, 2026"
+    },
+    {
+     "type": "tracking_note",
+     "date": "2026-07-19",
+     "text": "Monitoring note: Sonnet 5 recorded as released June 30 at $2/$10 introductory pricing through August 31; standard pricing $3/$15 listed to follow."
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "family_notes": [
+  {
+   "vendor": "anthropic",
+   "text": "Sonnet 5 ($2 / $10) is cheaper than the prior generation Sonnet 4.6 ($3 / $15) — the long-standing $3/$15 Sonnet tier is broken.",
+   "evidence": [
+    "anthropic-docs-2026-09-12"
+   ]
+  },
+  {
+   "vendor": "anthropic",
+   "text": "Opus pricing fell across generations: the retired Opus 4.1 lists $15 / $75 versus $5 / $25 for Opus 4.5 through Opus 5 — roughly a 3× cut along the retirement path.",
+   "evidence": [
+    "anthropic-docs-2026-09-12"
+   ]
+  },
+  {
+   "vendor": "deepseek",
+   "text": "Flash round trip: off-peak cache-miss $0.14 (until 2026-08-16) → $0.22 (escalation) → $0.15 (2026-09-10); output $0.28 → $0.66 → $0.60.",
+   "evidence": [
+    "deepseek-pricing-2026-09-12"
+   ]
+  }
+ ],
+ "provisional": [
+  {
+   "vendor": "openai",
+   "date": "2026-08-21",
+   "text": "GPT-5.6 Sol API pricing reported cut by more than 20% for three months (through ~November 21); the output component reported cut ~33%.",
+   "source": "third-party coverage, as tracked in this watch's monitoring notes"
+  },
+  {
+   "vendor": "openai",
+   "date": "2026-07-30",
+   "text": "Luna pricing reported cut ~80%; Terra ~20%.",
+   "source": "third-party coverage, as tracked in this watch's monitoring notes"
+  }
+ ],
+ "quote_verification": {
+  "checked": 10,
+  "failures": 0
+ }
+}

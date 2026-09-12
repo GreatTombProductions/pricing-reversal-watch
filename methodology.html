@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Methodology — Pricing-Reversal Watch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="methodology">
+  <header class="site-header">
+    <a class="brand" href="index.html">Pricing-Reversal Watch</a>
+    <nav aria-label="Main navigation">
+      <a href="methodology.html">Methodology</a>
+      <a href="sources.html">Sources &amp; receipts</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">How this trail is built</p>
+      <h1>Methodology</h1>
+      <p class="lede">
+        This site reports <strong>declared values</strong>: what a vendor's own page said on a
+        given date. It does not verify billing, average anything, or fill missing values. Its job
+        is to make changes — especially quiet reversals — as legible as launch announcements.
+      </p>
+    </section>
+
+    <section>
+      <h2>The evidence model</h2>
+      <ul class="plain-list notes">
+        <li><strong>Captures.</strong> Each monitored page is fetched at build time, saved raw, and pinned by a SHA-256 receipt. Capture files are published alongside this site so any quote can be re-checked against its source. Pages that change per request carry no stable hash promise — the receipt identifies the exact fetch, not a forever-identity.</li>
+        <li><strong>Monitoring notes.</strong> Dated observations recorded while tracking the pages (e.g., "rate basis as of 2026-08-31"). They carry dates and are labeled as notes — never presented as vendor quotes.</li>
+        <li><strong>Provisional items.</strong> Where a vendor's pages cannot be captured, third-party reports are listed as provisional and labeled — never as vendor-verified.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Rules this trail follows</h2>
+      <ul class="plain-list notes">
+        <li><strong>A failed fetch is a flagged finding, never silence.</strong> If a source cannot be fetched, the transport errors are recorded and displayed; the source becomes a documented gap.</li>
+        <li><strong>Hard per-source deadlines.</strong> Every fetch runs under a wall-clock deadline with a second transport fallback. A hanging server becomes a recorded error, never a stall — and one transport's failure is never treated as "the page moved" until both fail.</li>
+        <li><strong>Quotes are verified at build time.</strong> Every quote shown for an event is checked against the captured page text; the build fails closed on a quote it cannot locate.</li>
+        <li><strong>Current and historical bases are separate.</strong> A current page price never gets used to date a past period. Where a transition date is only known from a historical notice, the note says so.</li>
+        <li><strong>Absent evidence is never a clean bill.</strong> "No reversal found" is only claimable over the capture interval; vendors without a capture are documented gaps.</li>
+        <li><strong>Quiet moves stay quiet.</strong> Where a change has no published announcement date, the timeline says so and shows the first date it became visible in captures.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>What this is not</h2>
+      <ul class="plain-list notes">
+        <li>Not investment or procurement advice; no vendor recommendations.</li>
+        <li>Not invoice reconciliation — declared prices are not billed prices.</li>
+        <li>Not price prediction, and not rate-limit or uptime monitoring beyond what a snapshot evidences.</li>
+        <li>No accounts, no tracking, no backend: a static site and dated files.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Update cadence</h2>
+      <p>
+        The dataset is rebuilt by fetching the vendor pages and re-pinning captures; each build
+        stamps its own dates. Reversals between builds are only visible to the extent a capture
+        or monitoring note recorded them — which is exactly the asymmetry this watch exists to shrink.
+      </p>
+      <p><a href="sources.html">See the current receipts →</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Declared values, not verified ones. See <a href="sources.html">sources &amp; receipts</a> for the exact captures behind every number.</p>
+    <p>
+      <a href="https://github.com/GreatTombProductions/pricing-reversal-watch">Source code</a> ·
+      <a href="https://github.com/GreatTombProductions/quest-board/issues/new?title=pricing-reversal-watch%3A%20%5Bbrief%20description%5D&amp;labels=feedback%2Cpricing-reversal-watch">Feedback</a>
+    </p>
+  </footer>
+</body>
+</html>

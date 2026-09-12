@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A per-provider evidence trail of AI API price and spec changes — each change with an as-of date and verbatim evidence, so quiet reversals are as legible as promotional cuts.">
+  <title>Pricing-Reversal Watch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="timeline">
+  <header class="site-header">
+    <a class="brand" href="index.html">Pricing-Reversal Watch</a>
+    <nav aria-label="Main navigation">
+      <a href="methodology.html">Methodology</a>
+      <a href="sources.html">Sources &amp; receipts</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Declared-price change trail · AI APIs</p>
+      <h1>Price cuts get press. Reversals get a changelog line — or nothing.</h1>
+      <p class="lede">
+        A dated, per-provider trail of AI API price and spec changes. Every change carries its
+        as-of date and the vendor's own words. The point is symmetry: a rescinded increase, a
+        renamed model, a price that went up and back down should be as easy to find as a launch discount.
+      </p>
+      <div class="strip" aria-live="polite">
+        <div><span>Captured</span><strong id="captured-date">—</strong></div>
+        <div><span>Change events</span><strong id="event-count">—</strong></div>
+        <div><span>Vendors captured</span><strong id="vendor-count">—</strong></div>
+        <div><span>Quotes verified</span><strong id="quote-count">—</strong></div>
+      </div>
+      <p class="callout-note" id="coverage-statement"></p>
+    </section>
+
+    <section aria-labelledby="timeline-title">
+      <div class="section-heading">
+        <h2 id="timeline-title">The reversals and moves</h2>
+        <p>Newest first. Each card is one change; each quote links to the dated capture it came from.</p>
+      </div>
+      <div id="timeline" class="timeline"></div>
+    </section>
+
+    <section aria-labelledby="anthropic-title" class="vendor">
+      <div class="section-heading">
+        <h2 id="anthropic-title">Anthropic <span class="status-chip captured">captured</span></h2>
+        <p class="vendor-links" id="anthropic-links"></p>
+      </div>
+      <div id="anthropic-callout"></div>
+      <h3 class="subhead">Declared model prices <span class="hint">per million tokens, from the captured table</span></h3>
+      <div class="table-wrap"><table id="anthropic-models"></table></div>
+      <h3 class="subhead">From the boundary page <span class="hint">claude.com/pricing, same date</span></h3>
+      <ul id="anthropic-boundary" class="plain-list"></ul>
+      <h3 class="subhead">Cross-generation notes</h3>
+      <ul id="anthropic-notes" class="plain-list notes"></ul>
+    </section>
+
+    <section aria-labelledby="deepseek-title" class="vendor">
+      <div class="section-heading">
+        <h2 id="deepseek-title">DeepSeek <span class="status-chip captured">captured</span></h2>
+        <p class="vendor-links" id="deepseek-links"></p>
+      </div>
+      <h3 class="subhead">Declared rates <span class="hint">USD per million tokens; peak = 2× off-peak</span></h3>
+      <div class="table-wrap"><table id="deepseek-models"></table></div>
+      <p class="quote-inline" id="deepseek-schedule"></p>
+      <h3 class="subhead">Changelog <span class="hint">recent vendor entries, as captured</span></h3>
+      <ol id="deepseek-changelog" class="changelog"></ol>
+      <h3 class="subhead">Cross-generation notes</h3>
+      <ul id="deepseek-notes" class="plain-list notes"></ul>
+    </section>
+
+    <section aria-labelledby="openai-title" class="vendor gap">
+      <div class="section-heading">
+        <h2 id="openai-title">OpenAI <span class="status-chip gap">documented gap</span></h2>
+      </div>
+      <p id="openai-gap-reason" class="gap-reason"></p>
+      <details>
+        <summary>Transport errors at last attempt</summary>
+        <ul id="openai-errors" class="plain-list mono"></ul>
+      </details>
+      <h3 class="subhead">Provisional items <span class="hint">third-party reports — not vendor-verified</span></h3>
+      <ul id="openai-provisional" class="plain-list notes"></ul>
+    </section>
+
+    <section aria-labelledby="gaps-title" class="vendor gap">
+      <div class="section-heading">
+        <h2 id="gaps-title">Other vendors</h2>
+        <p>Absent evidence is not a clean bill of health. These are documented gaps until a first capture exists.</p>
+      </div>
+      <ul id="other-gaps" class="plain-list"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Declared values, not verified ones: prices shown are what the vendor's page said on the
+      capture date, pinned by SHA-256 receipts. Not advice; no vendor recommendations; no
+      invoice reconciliation or prediction. See <a href="methodology.html">methodology</a> and
+      <a href="sources.html">sources &amp; receipts</a>.
+    </p>
+    <p>
+      <a href="https://github.com/GreatTombProductions/pricing-reversal-watch">Source code</a> ·
+      <a href="https://github.com/GreatTombProductions/quest-board/issues/new?title=pricing-reversal-watch%3A%20%5Bbrief%20description%5D&amp;labels=feedback%2Cpricing-reversal-watch">Feedback</a>
+    </p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
