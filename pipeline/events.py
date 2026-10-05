@@ -11,6 +11,132 @@ as notes, not vendor quotes.
 
 EVENTS = [
     {
+        "id": "anthropic-opus55-launch",
+        "vendor": "anthropic",
+        "family": "Claude Opus 5.5",
+        "kind": "new_generation_cut",
+        "title": "Opus 5.5 launches at $4/$20 — below the $5/$25 Opus tier",
+        "summary": (
+            "Claude Opus 5.5 appears on the pricing page at $4 input / $20 output per MTok, 20% "
+            "below the $5/$25 that Opus 4.5 through Opus 5 still list. Its cache hits are priced at "
+            "0.05× input ($0.20) instead of the usual 0.1× — $0.50 on Opus 5 — and fast mode is "
+            "$8/$40 versus $10/$50. Opus 5 stays on the page at its old price: this is a cheaper new "
+            "generation, not a cut to an existing model. No launch date is published on the pages "
+            "held here; Opus 5.5 is absent from the 2026-09-12 capture and was first seen on "
+            "2026-10-04. Sonnet 5.5 launched in the same window at $2/$10, the same price as Sonnet 5."
+        ),
+        "announced": None,
+        "observed": "2026-10-04",
+        "confirmed": "2026-10-06",
+        "effective": None,
+        "status": "active",
+        "old_value": "Opus tier $5 / $25 per MTok (Opus 4.5 through Opus 5); cache hit $0.50",
+        "new_value": "Opus 5.5 $4 / $20 per MTok; cache hit $0.20 (0.05× input); fast mode $8 / $40",
+        "evidence": [
+            {
+                "type": "capture",
+                "capture": "anthropic-docs-2026-10-06",
+                "quote": (
+                    "On Claude Opus 5.5, a cache hit costs 5% of the standard input price "
+                    "($0.20 USD per million tokens)."
+                ),
+            },
+            {
+                "type": "capture",
+                "capture": "anthropic-docs-2026-10-06",
+                "quote": "Cache hits and refreshes on Claude Opus 5.5 are priced at 0.05x the base input price.",
+                "label": "footnote on the Opus 5.5 cache-hit price cell",
+            },
+            {
+                "type": "capture",
+                "capture": "claude-com-2026-10-06",
+                "quote": (
+                    "Opus 5.5 Daily driver for agentic coding and enterprise work Prompt caching "
+                    "Read $0.20 / MTok Write $5 / MTok Input $4 / MTok Output $20 / MTok"
+                ),
+                "label": "boundary page, same date",
+            },
+            {
+                "type": "values",
+                "capture": "anthropic-docs-2026-10-06",
+                "text": (
+                    "Parsed from the pricing table at capture: Opus 5.5 input $4, output $20, 5-minute "
+                    "cache write $5, 1-hour write $8, cache hit $0.20 per MTok; Opus 5 on the same "
+                    "table: $5 / $25 / $6.25 / $10 / $0.50."
+                ),
+            },
+            {
+                "type": "tracking_note",
+                "date": "2026-10-04",
+                "text": (
+                    "Monitoring note: Opus 5.5 ($4/$20) and Sonnet 5.5 ($2/$10) first seen on the "
+                    "pricing page; neither is in the 2026-09-12 capture. The pricing table was "
+                    "re-laid out at the same time (new column order, model taglines, availability "
+                    "labels moved into icons)."
+                ),
+            },
+        ],
+        "notes": [
+            "A cheaper successor is a different shape from a price cut: anyone pinned to Opus 5 "
+            "keeps paying $5/$25 until they migrate.",
+        ],
+    },
+    {
+        "id": "deepseek-peak-holiday-exclusion",
+        "vendor": "deepseek",
+        "family": "deepseek-flash / deepseek-v4-pro",
+        "kind": "schedule_change",
+        "title": "Peak schedule quietly amended — Chinese public holidays now off-peak",
+        "summary": (
+            "The footnote that defines DeepSeek's peak hours gained a clause: the weekday peak "
+            "windows now exclude Chinese public holidays, which are off-peak in full. Rates and "
+            "windows are unchanged. The change is not in the API changelog, and no change date is "
+            "published: it happened between the 2026-09-12 and 2026-10-06 captures and was first "
+            "noticed on 2026-10-04. On a holiday weekday inside a peak window, the same request now "
+            "bills at the off-peak rate, which is half the peak rate."
+        ),
+        "announced": None,
+        "observed": "2026-10-04",
+        "confirmed": "2026-10-06",
+        "effective": None,
+        "status": "active",
+        "old_value": "peak 01:00–04:00 and 06:00–10:00 UTC, Monday through Friday; all other hours off-peak",
+        "new_value": "same windows, Monday through Friday excluding Chinese public holidays; those holidays off-peak in full",
+        "evidence": [
+            {
+                "type": "capture",
+                "capture": "deepseek-pricing-2026-09-12",
+                "quote": (
+                    "Peak hours are 01:00 - 04:00 and 06:00 - 10:00 UTC, Monday through Friday "
+                    "(all other hours are off-peak)."
+                ),
+                "label": "before — 2026-09-12 capture",
+            },
+            {
+                "type": "capture",
+                "capture": "deepseek-pricing-2026-10-06",
+                "quote": (
+                    "Peak hours are 01:00 - 04:00 and 06:00 - 10:00 UTC, Monday through Friday, "
+                    "excluding Chinese public holidays. All other hours are off-peak, including "
+                    "weekends and Chinese public holidays in full."
+                ),
+                "label": "after — 2026-10-06 capture",
+            },
+            {
+                "type": "tracking_note",
+                "date": "2026-10-04",
+                "text": (
+                    "Monitoring note: holiday exclusion first seen on the pricing page. The "
+                    "2026-10-06 changelog capture contains no entry that mentions holidays."
+                ),
+            },
+        ],
+        "notes": [
+            "The page does not list which dates count as Chinese public holidays, and this watch "
+            "does not supply a holiday calendar.",
+        ],
+    },
+    {
         "id": "anthropic-sonnet5-intro",
         "vendor": "anthropic",
         "family": "Claude Sonnet 5",
@@ -87,6 +213,20 @@ EVENTS = [
             },
             {
                 "type": "capture",
+                "capture": "anthropic-docs-2026-10-06",
+                "quote": (
+                    "The $2/$10 per million input/output token pricing for Claude Sonnet 5, "
+                    "announced at launch as introductory pricing through August 31, 2026, is now "
+                    "the standard price. The previously scheduled increase to $3/$15 per million "
+                    "input/output tokens on September 1, 2026 will not occur."
+                ),
+                "label": (
+                    "later capture (2026-10-06), same text — now a footnote on the Sonnet 5 price "
+                    "cell (shown as a popover), no longer a visible note above the table"
+                ),
+            },
+            {
+                "type": "capture",
                 "capture": "claude-com-2026-09-12",
                 "quote": (
                     "Sonnet 5 High-performance model for coding and agents Input $2 / MTok "
@@ -141,7 +281,10 @@ EVENTS = [
                     "Off-peak rates are half of the peak rates. Peak hours are 01:00 - 04:00 "
                     "and 06:00 - 10:00 UTC, Monday through Friday (all other hours are off-peak)."
                 ),
-                "label": "current schedule (still in effect at capture date)",
+                "label": (
+                    "schedule as captured 2026-09-12 — later amended to exclude Chinese public "
+                    "holidays (see the schedule-change event)"
+                ),
             },
             {
                 "type": "tracking_note",
@@ -269,7 +412,26 @@ EVENTS = [
                     "In response to user demand, we have decided to continue providing API "
                     "services for DeepSeek V4 Pro after September 14, 2026"
                 ),
-                "label": "same notice carried on the pricing page",
+                "label": "same notice carried on the pricing page (2026-09-12)",
+            },
+            {
+                "type": "capture",
+                "capture": "deepseek-updates-2026-10-06",
+                "quote": (
+                    "In response to user demand, we have decided to continue providing API "
+                    "services for DeepSeek V4 Pro after September 14, 2026, with the billing "
+                    "method remaining unchanged."
+                ),
+                "label": "still in the API changelog at the 2026-10-06 capture",
+            },
+            {
+                "type": "tracking_note",
+                "date": "2026-10-04",
+                "text": (
+                    "Monitoring note: the continuation notice no longer appears on the pricing "
+                    "page (absent from the 2026-10-06 capture, where the footnotes were renumbered). "
+                    "It remains in the changelog, and V4 Pro is still listed at unchanged rates."
+                ),
             },
         ],
         "notes": [
@@ -305,18 +467,19 @@ FAMILY_NOTES = [
     {
         "vendor": "anthropic",
         "text": (
-            "Sonnet 5 ($2 / $10) is cheaper than the prior generation Sonnet 4.6 ($3 / $15) — "
-            "the long-standing $3/$15 Sonnet tier is broken."
+            "Sonnet 5 and Sonnet 5.5 ($2 / $10) are cheaper than the prior generation Sonnet 4.6 "
+            "($3 / $15) — the long-standing $3/$15 Sonnet tier is broken."
         ),
-        "evidence": ["anthropic-docs-2026-09-12"],
+        "evidence": ["anthropic-docs-2026-10-06"],
     },
     {
         "vendor": "anthropic",
         "text": (
-            "Opus pricing fell across generations: the retired Opus 4.1 lists $15 / $75 versus "
-            "$5 / $25 for Opus 4.5 through Opus 5 — roughly a 3× cut along the retirement path."
+            "Opus pricing fell across generations: the retired Opus 4.1 lists $15 / $75, Opus 4.5 "
+            "through Opus 5 list $5 / $25, and Opus 5.5 lists $4 / $20 — a 3.75× cut from Opus 4.1 "
+            "to Opus 5.5."
         ),
-        "evidence": ["anthropic-docs-2026-09-12"],
+        "evidence": ["anthropic-docs-2026-10-06"],
     },
     {
         "vendor": "deepseek",

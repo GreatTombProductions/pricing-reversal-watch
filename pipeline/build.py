@@ -95,13 +95,36 @@ def load_capture_index() -> dict:
             continue
         date_str, slug = m.groups()
         doc = path.read_text(encoding="utf-8", errors="replace")
-        text = norm_ws(parse_mod._text(parse_mod._strip_scripts(doc)))
+        text = norm_ws(parse_mod.capture_text(doc))
         entry = {"date": date_str, "slug": slug, "text": text, "path": path}
         index[path.stem] = entry
         for src in SOURCES:
             if src["slug"] == slug:
                 index[f"{src['id']}-{date_str}"] = entry
     return index
+
+
+def capture_catalog(index: dict) -> list[dict]:
+    """Every committed capture, so evidence from earlier dates keeps its link.
+
+    Receipts describe the latest fetch per source; events also cite older
+    captures. Each catalog entry carries the capture id(s), file and SHA-256.
+    """
+    by_path: dict = {}
+    for key, entry in index.items():
+        item = by_path.setdefault(
+            entry["path"],
+            {
+                "file": f"data/raw/{entry['path'].name}",
+                "date": entry["date"],
+                "sha256": fetch_mod.file_sha256(entry["path"]),
+                "bytes": entry["path"].stat().st_size,
+                "ids": [],
+            },
+        )
+        if key != entry["path"].stem:
+            item["ids"].append(key)
+    return sorted(by_path.values(), key=lambda c: (c["date"], c["file"]))
 
 
 def verify_quotes(events: list, index: dict) -> list[str]:
@@ -178,9 +201,16 @@ def run(do_fetch: bool = True) -> dict:
             m = re.match(r"(\d{4}-\d{2}-\d{2})-", path.name)
             receipt["capture_id"] = f"{src['id']}-{m.group(1)}" if m else src["id"]
             doc = path.read_text(encoding="utf-8", errors="replace")
-            capture_texts[src["id"]] = norm_ws(parse_mod._text(parse_mod._strip_scripts(doc)))
+            capture_texts[src["id"]] = norm_ws(parse_mod.capture_text(doc))
             if src["parser"] is not None:
-                parsed[src["id"]] = src["parser"](doc)
+                try:
+                    parsed[src["id"]] = src["parser"](doc)
+                except parse_mod.ParseError as exc:
+                    # Layout drift stops the build: publishing values read from
+                    # the wrong column is worse than publishing nothing new.
+                    print(f"PARSE FAILED for {src['id']} ({path.name}): {exc}", file=sys.stderr)
+                    print("Build fails closed; update the parser against this capture.", file=sys.stderr)
+                    raise SystemExit(3)
                 receipt["parsed"] = True
             else:
                 receipt["parsed"] = False
@@ -203,7 +233,17 @@ def run(do_fetch: bool = True) -> dict:
     ds_updates = parsed.get("deepseek-updates", {})
 
     callouts = anthropic_parse.get("callouts", [])
-    featured = [c for c in callouts if "will not occur" in c or "standard price" in c]
+    cell_notes = anthropic_parse.get("cell_notes", [])
+
+    def _is_featured(text: str) -> bool:
+        return "will not occur" in text or "standard price" in text
+
+    featured = [{"text": c, "where": "visible note on the captured pricing page"} for c in callouts if _is_featured(c)]
+    featured += [
+        {"text": n["text"], "where": "footnote on a price cell of the captured pricing page (shown as a popover)"}
+        for n in cell_notes
+        if _is_featured(n["text"]) and all(n["text"] != f["text"] for f in featured)
+    ]
 
     vendors = {
         "anthropic": {
@@ -215,6 +255,7 @@ def run(do_fetch: bool = True) -> dict:
             "models": anthropic_parse.get("models", []),
             "callouts_featured": featured,
             "callouts_total": len(callouts),
+            "cell_notes": cell_notes,
             "boundary_blocks": claude_com_parse.get("price_blocks", []),
         },
         "deepseek": {
@@ -283,6 +324,7 @@ def run(do_fetch: bool = True) -> dict:
         "events": events_sorted,
         "family_notes": events_mod.FAMILY_NOTES,
         "provisional": events_mod.PROVISIONAL,
+        "captures": capture_catalog(capture_index),
         "quote_verification": {"checked": sum(len([i for i in ev["evidence"] if i["type"] == "capture" and i.get("quote")]) for ev in events_mod.EVENTS), "failures": 0},
     }
 

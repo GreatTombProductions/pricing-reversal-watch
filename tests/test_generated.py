@@ -46,6 +46,10 @@ def test_current_anthropic_values_present() -> None:
     assert models["Claude Opus 5"]["output"] == 25.0
     assert models["Claude Fable 5"]["input"] == 10.0
     assert models["Claude Fable 5"]["output"] == 50.0
+    assert models["Claude Opus 5.5"]["input"] == 4.0
+    assert models["Claude Opus 5.5"]["output"] == 20.0
+    featured = DATA["vendors"]["anthropic"]["callouts_featured"]
+    assert any("will not occur" in f["text"] and f["where"] for f in featured)
 
 
 def test_deepseek_second_vendor_parsed() -> None:
@@ -69,7 +73,7 @@ def test_seed_timeline_sonnet5_reversal_has_dual_anchors_and_receipts() -> None:
 
 
 def test_events_sorted_and_well_formed() -> None:
-    assert len(DATA["events"]) == 5
+    assert len(DATA["events"]) == 7
     for ev in DATA["events"]:
         assert ev["id"] and ev["kind"] and ev["title"] and ev["summary"]
         assert ev["vendor"] in DATA["vendors"]
@@ -98,3 +102,19 @@ def test_static_files_exist_and_fetch_flat_data_path() -> None:
     assert "data/index.json" in app
     assert (PROJECT / "frontend" / "methodology.html").exists()
     assert (PROJECT / "frontend" / "sources.html").exists()
+
+
+def test_every_cited_capture_is_in_the_catalog_with_a_hash() -> None:
+    catalog = {cid: c for c in DATA["captures"] for cid in c["ids"]}
+    cited = {i["capture"] for ev in DATA["events"] for i in ev["evidence"] if i.get("capture")}
+    assert cited <= set(catalog), sorted(cited - set(catalog))
+    for cid in cited:
+        entry = catalog[cid]
+        assert len(entry["sha256"]) == 64
+        assert (PROJECT / entry["file"]).exists()
+
+
+def test_schedule_change_quotes_both_sides() -> None:
+    ev = {e["id"]: e for e in DATA["events"]}["deepseek-peak-holiday-exclusion"]
+    caps = [i["capture"] for i in ev["evidence"] if i["type"] == "capture"]
+    assert caps == ["deepseek-pricing-2026-09-12", "deepseek-pricing-2026-10-06"]

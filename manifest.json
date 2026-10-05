@@ -8,14 +8,24 @@
   "github": "https://github.com/GreatTombProductions/pricing-reversal-watch",
   "data_source": "Vendor pricing pages and changelogs — Anthropic (docs + boundary page), DeepSeek (Models & Pricing + API changelog); OpenAI documented gap (HTTP 403)",
   "data_url": "https://platform.claude.com/docs/en/about-claude/pricing",
-  "records": "17 Anthropic model rows, 2 DeepSeek models x 2 rate bands, 5 change events, 5 capture receipts, 10 verified quotes",
-  "detail": "Each change event lists announced/observed/confirmed/effective dates, the before -> after values, and verbatim evidence: vendor quotes linked to raw HTML captures pinned by SHA-256, with monitoring notes kept separate and labeled. Featured trail: Claude Sonnet 5's scheduled $3/$15 increase cancelled before it took effect ($2/$10 now standard); DeepSeek's August peak/off-peak escalation ($0.14 -> $0.22 cache-miss) and the September V4.1-Flash price reduction ($0.22 -> $0.15), plus the V4 Pro continuation notice and legacy-name retirement. Fetch failures are recorded with transport errors; vendors without a capture are documented gaps, never clean. Build-time quote verification fails closed.",
+  "records": "19 Anthropic model rows, 2 DeepSeek models x 2 rate bands, 7 change events, 9 pinned captures across 4 sources, 17 verified quotes",
+  "detail": "Each change event lists announced/observed/confirmed/effective dates, the before -> after values, and verbatim evidence: vendor quotes linked to raw HTML captures pinned by SHA-256, with monitoring notes kept separate and labeled. Featured trail: Claude Sonnet 5's scheduled $3/$15 increase cancelled before it took effect ($2/$10 now standard); Claude Opus 5.5 arriving at $4/$20 while Opus 4.5-5 stay at $5/$25; DeepSeek's August peak/off-peak escalation ($0.14 -> $0.22 cache-miss), the September V4.1-Flash price reduction ($0.22 -> $0.15), and a later unannounced schedule amendment making Chinese public holidays off-peak, quoted before and after. Price tables are read by column label and the build fails closed on layout drift or an unverifiable quote; vendors without a capture are documented gaps, never clean.",
   "asymmetry": "AI API customers can see current prices but rarely the trajectory: promotional cuts get press, while reversals, rescinded increases, context-window changes, and renames arrive as a changelog line or not at all. Someone mid-migration or deciding to stay on a model family cannot answer 'did this go up, and did it come back down?' without re-reading changelogs. This watch keeps each change with its date and the vendor's own words, so a cancelled increase is as legible as a discount.",
   "pipeline_note": "Multi-transport fetch (urllib -> curl) with per-source 60s wall-clock deadlines; raw captures committed with SHA-256 receipts; curated event layer whose quotes are verified against captures at build time (fail closed); monitoring notes distinguished from vendor quotes; documented gaps for unreachable vendors; static site, no backend.",
-  "search_modes": ["price change trail", "AI API price history", "vendor pricing receipts"],
+  "search_modes": [
+    "price change trail",
+    "AI API price history",
+    "vendor pricing receipts"
+  ],
   "released_date": "2026-09-12",
   "status": "released",
   "deploy_branch": "gh-pages",
   "deploy_method": "static",
-  "feedback_categories": ["data", "source-drift", "methodology", "bug"]
+  "feedback_categories": [
+    "data",
+    "source-drift",
+    "methodology",
+    "bug"
+  ],
+  "last_refreshed": "2026-10-06"
 }

@@ -1,8 +1,8 @@
 {
  "v": 1,
  "tool": "pricing-reversal-watch",
- "generated_at": "2026-09-12T08:44:51+00:00",
- "captured": "2026-09-12",
+ "generated_at": "2026-10-05T22:21:06+00:00",
+ "captured": "2026-10-06",
  "currency": "USD",
  "unit": "per 1,000,000 tokens (MTok) unless noted",
  "coverage_statement": "This watch holds vendor-page captures from 2026-09-06 onward, plus dated monitoring notes from 2026-07-19. \"No reversal found\" is claimable only over the capture interval. Vendors without a capture are documented gaps, never clean.",
@@ -15,19 +15,19 @@
    "fetch_status": "ok",
    "http_code": 200,
    "transport": "urllib",
-   "attempted_at": "2026-09-12T08:44:51+00:00",
+   "attempted_at": "2026-10-05T22:21:05+00:00",
    "attempts": [
     {
      "transport": "urllib",
      "http_code": 200
     }
    ],
-   "bytes": 564429,
-   "sha256": "8654269457c3b210b098a06091f6131f2e169f2d9973a9f9dd2ce28b1dceb898",
+   "bytes": 868587,
+   "sha256": "aac51c84ae78c433b9c50c52472b50633fcff5ebf8154128bc0d375a1e6bcc61",
    "capture_state": "fresh",
-   "captured_at": "2026-09-12T08:44:51+00:00",
-   "file": "data/raw/2026-09-12-platform.claude.com-pricing.html",
-   "capture_id": "anthropic-docs-2026-09-12",
+   "captured_at": "2026-10-05T22:21:05+00:00",
+   "file": "data/raw/2026-10-06-platform.claude.com-pricing.html",
+   "capture_id": "anthropic-docs-2026-10-06",
    "parsed": true
   },
   {
@@ -38,19 +38,19 @@
    "fetch_status": "ok",
    "http_code": 200,
    "transport": "urllib",
-   "attempted_at": "2026-09-12T08:44:51+00:00",
+   "attempted_at": "2026-10-05T22:21:05+00:00",
    "attempts": [
     {
      "transport": "urllib",
      "http_code": 200
     }
    ],
-   "bytes": 1147265,
-   "sha256": "491d3a818a078febd11c582d0cdfb6f3235390ff54ba7e468f4d885fe1ad7396",
+   "bytes": 1187346,
+   "sha256": "440edc72f87b1f71ab9682952691694485bb761b13d9cd58e69083a9e31a6ced",
    "capture_state": "fresh",
-   "captured_at": "2026-09-12T08:44:51+00:00",
-   "file": "data/raw/2026-09-12-claude.com-pricing.html",
-   "capture_id": "claude-com-2026-09-12",
+   "captured_at": "2026-10-05T22:21:05+00:00",
+   "file": "data/raw/2026-10-06-claude.com-pricing.html",
+   "capture_id": "claude-com-2026-10-06",
    "parsed": true
   },
   {
@@ -61,19 +61,19 @@
    "fetch_status": "ok",
    "http_code": 200,
    "transport": "urllib",
-   "attempted_at": "2026-09-12T08:44:51+00:00",
+   "attempted_at": "2026-10-05T22:21:05+00:00",
    "attempts": [
     {
      "transport": "urllib",
      "http_code": 200
     }
    ],
-   "bytes": 23359,
-   "sha256": "755aa9b488d1185cba016ca4de3b3b6b8f593f5e13e5f9f961305289a5c8d242",
+   "bytes": 23982,
+   "sha256": "210f102275ccf1a6542f08a3bc9e4b4c7c83278cb74b35217bffa112df6363b2",
    "capture_state": "fresh",
-   "captured_at": "2026-09-12T08:44:51+00:00",
-   "file": "data/raw/2026-09-12-api-docs.deepseek.com-pricing.html",
-   "capture_id": "deepseek-pricing-2026-09-12",
+   "captured_at": "2026-10-05T22:21:05+00:00",
+   "file": "data/raw/2026-10-06-api-docs.deepseek.com-pricing.html",
+   "capture_id": "deepseek-pricing-2026-10-06",
    "parsed": true
   },
   {
@@ -84,19 +84,19 @@
    "fetch_status": "ok",
    "http_code": 200,
    "transport": "urllib",
-   "attempted_at": "2026-09-12T08:44:51+00:00",
+   "attempted_at": "2026-10-05T22:21:05+00:00",
    "attempts": [
     {
      "transport": "urllib",
      "http_code": 200
     }
    ],
-   "bytes": 50934,
-   "sha256": "da7f5c4919ed8874ff575dc1c7c91da36e5b141a1b17b43309f3d75156469185",
+   "bytes": 48079,
+   "sha256": "2922113bc4e0e970fa6d3c4065c3cff3ec661a4db03d671cc2310545c5b5bb71",
    "capture_state": "fresh",
-   "captured_at": "2026-09-12T08:44:51+00:00",
-   "file": "data/raw/2026-09-12-api-docs.deepseek.com-updates.html",
-   "capture_id": "deepseek-updates-2026-09-12",
+   "captured_at": "2026-10-05T22:21:05+00:00",
+   "file": "data/raw/2026-10-06-api-docs.deepseek.com-updates.html",
+   "capture_id": "deepseek-updates-2026-10-06",
    "parsed": true
   },
   {
@@ -107,7 +107,7 @@
    "fetch_status": "http_error",
    "http_code": 403,
    "transport": null,
-   "attempted_at": "2026-09-12T08:44:51+00:00",
+   "attempted_at": "2026-10-05T22:21:05+00:00",
    "attempts": [
     {
      "transport": "urllib",
@@ -135,203 +135,344 @@
    "models": [
     {
      "name": "Claude Fable 5.1",
+     "description": "For demanding reasoning and long-horizon agentic work",
      "input": 10.0,
+     "output": 50.0,
      "cache_write_5m": 12.5,
      "cache_write_1h": 20.0,
      "cache_hit": 0.25,
-     "output": 50.0,
-     "limited": false,
-     "retired_note": null
+     "flags": [],
+     "status_note": null,
+     "retired": false
     },
     {
-     "name": "Claude Mythos 5.1 ( limited availability )",
-     "input": 10.0,
-     "cache_write_5m": 12.5,
-     "cache_write_1h": 20.0,
-     "cache_hit": 0.25,
-     "output": 50.0,
-     "limited": true,
-     "retired_note": null
+     "name": "Claude Opus 5.5",
+     "description": "For long-running agentic coding and knowledge work",
+     "input": 4.0,
+     "output": 20.0,
+     "cache_write_5m": 5.0,
+     "cache_write_1h": 8.0,
+     "cache_hit": 0.2,
+     "flags": [],
+     "status_note": null,
+     "retired": false
     },
     {
-     "name": "Claude Fable 5",
-     "input": 10.0,
-     "cache_write_5m": 12.5,
-     "cache_write_1h": 20.0,
-     "cache_hit": 1.0,
-     "output": 50.0,
-     "limited": false,
-     "retired_note": null
-    },
-    {
-     "name": "Claude Mythos 5 ( limited availability )",
-     "input": 10.0,
-     "cache_write_5m": 12.5,
-     "cache_write_1h": 20.0,
-     "cache_hit": 1.0,
-     "output": 50.0,
-     "limited": true,
-     "retired_note": null
-    },
-    {
-     "name": "Claude Opus 5",
-     "input": 5.0,
-     "cache_write_5m": 6.25,
-     "cache_write_1h": 10.0,
-     "cache_hit": 0.5,
-     "output": 25.0,
-     "limited": false,
-     "retired_note": null
-    },
-    {
-     "name": "Claude Opus 4.8",
-     "input": 5.0,
-     "cache_write_5m": 6.25,
-     "cache_write_1h": 10.0,
-     "cache_hit": 0.5,
-     "output": 25.0,
-     "limited": false,
-     "retired_note": null
-    },
-    {
-     "name": "Claude Opus 4.7",
-     "input": 5.0,
-     "cache_write_5m": 6.25,
-     "cache_write_1h": 10.0,
-     "cache_hit": 0.5,
-     "output": 25.0,
-     "limited": false,
-     "retired_note": null
-    },
-    {
-     "name": "Claude Opus 4.6",
-     "input": 5.0,
-     "cache_write_5m": 6.25,
-     "cache_write_1h": 10.0,
-     "cache_hit": 0.5,
-     "output": 25.0,
-     "limited": false,
-     "retired_note": null
-    },
-    {
-     "name": "Claude Opus 4.5",
-     "input": 5.0,
-     "cache_write_5m": 6.25,
-     "cache_write_1h": 10.0,
-     "cache_hit": 0.5,
-     "output": 25.0,
-     "limited": false,
-     "retired_note": null
-    },
-    {
-     "name": "Claude Opus 4.1 ( retired, except on Bedrock and Google Cloud )",
-     "input": 15.0,
-     "cache_write_5m": 18.75,
-     "cache_write_1h": 30.0,
-     "cache_hit": 1.5,
-     "output": 75.0,
-     "limited": false,
-     "retired_note": "retired, except on Bedrock and Google Cloud "
-    },
-    {
-     "name": "Claude Opus 4 ( retired, except on Google Cloud )",
-     "input": 15.0,
-     "cache_write_5m": 18.75,
-     "cache_write_1h": 30.0,
-     "cache_hit": 1.5,
-     "output": 75.0,
-     "limited": false,
-     "retired_note": "retired, except on Google Cloud "
-    },
-    {
-     "name": "Claude Sonnet 5",
+     "name": "Claude Sonnet 5.5",
+     "description": "The best combination of speed and intelligence",
      "input": 2.0,
+     "output": 10.0,
      "cache_write_5m": 2.5,
      "cache_write_1h": 4.0,
      "cache_hit": 0.2,
-     "output": 10.0,
-     "limited": false,
-     "retired_note": null
-    },
-    {
-     "name": "Claude Sonnet 4.6",
-     "input": 3.0,
-     "cache_write_5m": 3.75,
-     "cache_write_1h": 6.0,
-     "cache_hit": 0.3,
-     "output": 15.0,
-     "limited": false,
-     "retired_note": null
-    },
-    {
-     "name": "Claude Sonnet 4.5",
-     "input": 3.0,
-     "cache_write_5m": 3.75,
-     "cache_write_1h": 6.0,
-     "cache_hit": 0.3,
-     "output": 15.0,
-     "limited": false,
-     "retired_note": null
-    },
-    {
-     "name": "Claude Sonnet 4 ( retired, except on Bedrock and Google Cloud )",
-     "input": 3.0,
-     "cache_write_5m": 3.75,
-     "cache_write_1h": 6.0,
-     "cache_hit": 0.3,
-     "output": 15.0,
-     "limited": false,
-     "retired_note": "retired, except on Bedrock and Google Cloud "
+     "flags": [],
+     "status_note": null,
+     "retired": false
     },
     {
      "name": "Claude Haiku 4.5",
+     "description": "The fastest model with near-frontier intelligence",
      "input": 1.0,
+     "output": 5.0,
      "cache_write_5m": 1.25,
      "cache_write_1h": 2.0,
      "cache_hit": 0.1,
-     "output": 5.0,
-     "limited": false,
-     "retired_note": null
+     "flags": [],
+     "status_note": null,
+     "retired": false
     },
     {
-     "name": "Claude Haiku 3.5 ( retired, except on Bedrock and Google Cloud )",
+     "name": "Claude Mythos 5.1",
+     "description": null,
+     "input": 10.0,
+     "output": 50.0,
+     "cache_write_5m": 12.5,
+     "cache_write_1h": 20.0,
+     "cache_hit": 0.25,
+     "flags": [
+      "Invite only"
+     ],
+     "status_note": "Claude Mythos 5.1 is offered separately, by invitation only, as part of Project Glasswing. It shares Claude Fable 5.1’s specifications and pricing. For access, contact your Anthropic, AWS, or Google Cloud account team.",
+     "retired": false
+    },
+    {
+     "name": "Claude Fable 5",
+     "description": null,
+     "input": 10.0,
+     "output": 50.0,
+     "cache_write_5m": 12.5,
+     "cache_write_1h": 20.0,
+     "cache_hit": 1.0,
+     "flags": [],
+     "status_note": null,
+     "retired": false
+    },
+    {
+     "name": "Claude Mythos 5",
+     "description": null,
+     "input": 10.0,
+     "output": 50.0,
+     "cache_write_5m": 12.5,
+     "cache_write_1h": 20.0,
+     "cache_hit": 1.0,
+     "flags": [
+      "Invite only"
+     ],
+     "status_note": "Claude Mythos 5 is offered separately, by invitation only, as part of Project Glasswing. It shares Claude Fable 5’s specifications and pricing. For access, contact your Anthropic, AWS, or Google Cloud account team.",
+     "retired": false
+    },
+    {
+     "name": "Claude Opus 5",
+     "description": null,
+     "input": 5.0,
+     "output": 25.0,
+     "cache_write_5m": 6.25,
+     "cache_write_1h": 10.0,
+     "cache_hit": 0.5,
+     "flags": [],
+     "status_note": null,
+     "retired": false
+    },
+    {
+     "name": "Claude Opus 4.8",
+     "description": null,
+     "input": 5.0,
+     "output": 25.0,
+     "cache_write_5m": 6.25,
+     "cache_write_1h": 10.0,
+     "cache_hit": 0.5,
+     "flags": [],
+     "status_note": null,
+     "retired": false
+    },
+    {
+     "name": "Claude Opus 4.7",
+     "description": null,
+     "input": 5.0,
+     "output": 25.0,
+     "cache_write_5m": 6.25,
+     "cache_write_1h": 10.0,
+     "cache_hit": 0.5,
+     "flags": [],
+     "status_note": null,
+     "retired": false
+    },
+    {
+     "name": "Claude Opus 4.6",
+     "description": null,
+     "input": 5.0,
+     "output": 25.0,
+     "cache_write_5m": 6.25,
+     "cache_write_1h": 10.0,
+     "cache_hit": 0.5,
+     "flags": [],
+     "status_note": null,
+     "retired": false
+    },
+    {
+     "name": "Claude Opus 4.5",
+     "description": null,
+     "input": 5.0,
+     "output": 25.0,
+     "cache_write_5m": 6.25,
+     "cache_write_1h": 10.0,
+     "cache_hit": 0.5,
+     "flags": [],
+     "status_note": null,
+     "retired": false
+    },
+    {
+     "name": "Claude Opus 4.1",
+     "description": null,
+     "input": 15.0,
+     "output": 75.0,
+     "cache_write_5m": 18.75,
+     "cache_write_1h": 30.0,
+     "cache_hit": 1.5,
+     "flags": [
+      "retired, except on Bedrock and Google Cloud"
+     ],
+     "status_note": "retired, except on Bedrock and Google Cloud.",
+     "retired": true
+    },
+    {
+     "name": "Claude Opus 4",
+     "description": null,
+     "input": 15.0,
+     "output": 75.0,
+     "cache_write_5m": 18.75,
+     "cache_write_1h": 30.0,
+     "cache_hit": 1.5,
+     "flags": [
+      "retired, except on Google Cloud"
+     ],
+     "status_note": "retired, except on Google Cloud.",
+     "retired": true
+    },
+    {
+     "name": "Claude Sonnet 5",
+     "description": null,
+     "input": 2.0,
+     "output": 10.0,
+     "cache_write_5m": 2.5,
+     "cache_write_1h": 4.0,
+     "cache_hit": 0.2,
+     "flags": [],
+     "status_note": null,
+     "retired": false
+    },
+    {
+     "name": "Claude Sonnet 4.6",
+     "description": null,
+     "input": 3.0,
+     "output": 15.0,
+     "cache_write_5m": 3.75,
+     "cache_write_1h": 6.0,
+     "cache_hit": 0.3,
+     "flags": [],
+     "status_note": null,
+     "retired": false
+    },
+    {
+     "name": "Claude Sonnet 4.5",
+     "description": null,
+     "input": 3.0,
+     "output": 15.0,
+     "cache_write_5m": 3.75,
+     "cache_write_1h": 6.0,
+     "cache_hit": 0.3,
+     "flags": [],
+     "status_note": null,
+     "retired": false
+    },
+    {
+     "name": "Claude Sonnet 4",
+     "description": null,
+     "input": 3.0,
+     "output": 15.0,
+     "cache_write_5m": 3.75,
+     "cache_write_1h": 6.0,
+     "cache_hit": 0.3,
+     "flags": [
+      "retired, except on Bedrock and Google Cloud"
+     ],
+     "status_note": "retired, except on Bedrock and Google Cloud.",
+     "retired": true
+    },
+    {
+     "name": "Claude Haiku 3.5",
+     "description": null,
      "input": 0.8,
+     "output": 4.0,
      "cache_write_5m": 1.0,
      "cache_write_1h": 1.6,
      "cache_hit": 0.08,
-     "output": 4.0,
-     "limited": false,
-     "retired_note": "retired, except on Bedrock and Google Cloud "
+     "flags": [
+      "retired, except on Bedrock and Google Cloud"
+     ],
+     "status_note": "retired, except on Bedrock and Google Cloud.",
+     "retired": true
     }
    ],
    "callouts_featured": [
-    "The $2/$10 per million input/output token pricing for Claude Sonnet 5, announced at launch as introductory pricing through August 31, 2026, is now the standard price. The previously scheduled increase to $3/$15 per million input/output tokens on September 1, 2026 will not occur."
+    {
+     "text": "The $2/$10 per million input/output token pricing for Claude Sonnet 5, announced at launch as introductory pricing through August 31, 2026, is now the standard price. The previously scheduled increase to $3/$15 per million input/output tokens on September 1, 2026 will not occur.",
+     "where": "footnote on a price cell of the captured pricing page (shown as a popover)"
+    }
    ],
-   "callouts_total": 12,
+   "callouts_total": 7,
+   "cell_notes": [
+    {
+     "anchor": null,
+     "text": "Cache hits and refreshes on Claude Fable 5.1 and Claude Mythos 5.1 are priced at 0.025x the base input price."
+    },
+    {
+     "anchor": null,
+     "text": "Cache hits and refreshes on Claude Opus 5.5 are priced at 0.05x the base input price."
+    },
+    {
+     "anchor": "claude-sonnet-5-introductory-pricing",
+     "text": "The $2/$10 per million input/output token pricing for Claude Sonnet 5, announced at launch as introductory pricing through August 31, 2026, is now the standard price. The previously scheduled increase to $3/$15 per million input/output tokens on September 1, 2026 will not occur."
+    }
+   ],
    "boundary_blocks": [
     {
-     "name": "Fable",
+     "name": "Fable 5.1",
      "input": 10.0,
      "output": 50.0,
-     "context": "es Team Enterprise (self-serve) Enterprise (sales-assisted) Fable No Yes Yes Opus Yes Yes Yes Sonnet Yes Yes Yes Haiku Yes Yes Yes Context window More information 200k 500k on default model 500k on default model Extra us"
+     "context": "Save 50% with batch processing. Learn more Batch processing Fable 5.1 Next generation intelligence for long-running agents Prompt caching Read $0.25 / MTok Write $12.50 / MTok Input $10 / MTok Output $50 / MTok"
     },
     {
-     "name": "Opus 5",
-     "input": 5.0,
-     "output": 25.0,
-     "context": "/ MTok Prompt caching Read $0.25 / MTok Write $12.50 / MTok Opus 5 Ideal for complex agentic coding and enterprise work Input $5 / MTok Output $25 / MTok Prompt caching Read $0.50 / MTok Write $6.25 / MTok Sonnet 5 High-"
+     "name": "Opus 5.5",
+     "input": 4.0,
+     "output": 20.0,
+     "context": "MTok Write $12.50 / MTok Input $10 / MTok Output $50 / MTok Opus 5.5 Daily driver for agentic coding and enterprise work Prompt caching Read $0.20 / MTok Write $5 / MTok Input $4 / MTok Output $20 / MTok"
     },
     {
-     "name": "Sonnet 5",
+     "name": "Sonnet 5.5",
      "input": 2.0,
      "output": 10.0,
-     "context": " / MTok Prompt caching Read $0.50 / MTok Write $6.25 / MTok Sonnet 5 High-performance model for coding and agents Input $2 / MTok Output $10 / MTok Prompt caching Read $0.20 / MTok Write $2.50 / MTok Haiku 4.5 Fastest, m"
+     "context": "20 / MTok Write $5 / MTok Input $4 / MTok Output $20 / MTok Sonnet 5.5 High-performance model for coding and agents Prompt caching Read $0.20 / MTok Write $2.50 / MTok Input $2 / MTok Output $10 / MTok"
     },
     {
      "name": "Haiku 4.5",
      "input": 1.0,
      "output": 5.0,
-     "context": " / MTok Prompt caching Read $0.20 / MTok Write $2.50 / MTok Haiku 4.5 Fastest, most cost-efficient model Input $1 / MTok Output $5 / MTok Prompt caching Read $0.10 / MTok Write $1.25 / MTok For workloads that need to run"
+     "context": "/ MTok Write $2.50 / MTok Input $2 / MTok Output $10 / MTok Haiku 4.5 Fastest, most cost-efficient model Prompt caching Read $0.10 / MTok Write $1.25 / MTok Input $1 / MTok Output $5 / MTok"
+    },
+    {
+     "name": "Sonnet 5",
+     "input": 2.0,
+     "output": 10.0,
+     "context": "ens in new tab) Explore detailed pricing (opens in new tab) Sonnet 5 High-performance model for coding and agents Prompt caching Read $0.20 / MTok Write $2.50 / MTok Input $2 / MTok Output $10 / MTok"
+    },
+    {
+     "name": "Opus 5",
+     "input": 5.0,
+     "output": 25.0,
+     "context": "/ MTok Write $2.50 / MTok Input $2 / MTok Output $10 / MTok Opus 5 Ideal for complex agentic coding and enterprise work Prompt caching Read $0.50 / MTok Write $6.25 / MTok Input $5 / MTok Output $25 / MTok"
+    },
+    {
+     "name": "Fable 5",
+     "input": 10.0,
+     "output": 50.0,
+     "context": "Save 50% with batch processing. Learn more Batch processing Fable 5 Prompt caching Read $1 / MTok Write $12.50 / MTok Input $10 / MTok Output $50 / MTok"
+    },
+    {
+     "name": "Opus 4.8",
+     "input": 5.0,
+     "output": 25.0,
+     "context": "MTok Write $12.50 / MTok Input $10 / MTok Output $50 / MTok Opus 4.8 Prompt caching Read $0.50 / MTok Write $6.25 / MTok Input $5 / MTok Output $25 / MTok"
+    },
+    {
+     "name": "Sonnet 4.6",
+     "input": 3.0,
+     "output": 15.0,
+     "context": "/ MTok Write $6.25 / MTok Input $5 / MTok Output $25 / MTok Sonnet 4.6 Prompt caching Read $0.30 / MTok Write $3.75 / MTok Input $3 / MTok Output $15 / MTok"
+    },
+    {
+     "name": "Opus 4.7",
+     "input": 5.0,
+     "output": 25.0,
+     "context": "/ MTok Write $3.75 / MTok Input $3 / MTok Output $15 / MTok Opus 4.7 Prompt caching Read $0.50 / MTok Write $6.25 / MTok Input $5 / MTok Output $25 / MTok"
+    },
+    {
+     "name": "Opus 4.6",
+     "input": 5.0,
+     "output": 25.0,
+     "context": "/ MTok Write $6.25 / MTok Input $5 / MTok Output $25 / MTok Opus 4.6 Prompt caching Read $0.50 / MTok Write $6.25 / MTok Input $5 / MTok Output $25 / MTok"
+    },
+    {
+     "name": "Sonnet 4.5",
+     "input": 3.0,
+     "output": 15.0,
+     "context": "/ MTok Write $6.25 / MTok Input $5 / MTok Output $25 / MTok Sonnet 4.5 Prompt caching Read $0.30 / MTok Write $3.75 / MTok Input $3 / MTok Output $15 / MTok"
+    },
+    {
+     "name": "Opus 4.5",
+     "input": 5.0,
+     "output": 25.0,
+     "context": "/ MTok Write $3.75 / MTok Input $3 / MTok Output $15 / MTok Opus 4.5 Prompt caching Read $0.50 / MTok Write $6.25 / MTok Input $5 / MTok Output $25 / MTok"
     }
    ]
   },
@@ -380,7 +521,7 @@
      "concurrency_limit": "500"
     }
    ],
-   "schedule_quote": "Peak hours are 01:00 - 04:00 and 06:00 - 10:00 UTC, Monday through Friday (all other hours are off-peak).",
+   "schedule_quote": "Peak hours are 01:00 - 04:00 and 06:00 - 10:00 UTC, Monday through Friday, excluding Chinese public holidays. All other hours are off-peak, including weekends and Chinese public holidays in full.",
    "footnotes": [
     {
      "n": 1,
@@ -388,15 +529,11 @@
     },
     {
      "n": 2,
-     "text": "In response to user demand, we have decided to continue providing API services for DeepSeek V4 Pro after September 14, 2026, with the billing method remaining unchanged. We will provide further notice should there be any changes. Thank you for your understanding and support!"
+     "text": "Off-peak rates are half of the peak rates. Peak hours are 01:00 - 04:00 and 06:00 - 10:00 UTC, Monday through Friday, excluding Chinese public holidays. All other hours are off-peak, including weekends and Chinese public holidays in full."
     },
     {
      "n": 3,
-     "text": "Off-peak rates are half of the peak rates. Peak hours are 01:00 - 04:00 and 06:00 - 10:00 UTC, Monday through Friday (all other hours are off-peak)."
-    },
-    {
-     "n": 4,
-     "text": "For more details on concurrency limits, please refer to Rate Limit & Isolation . Deduction Rules The expense = number of tokens × price. The corresponding fees will be directly deducted from your topped-up balance or granted balance, with a preference for using the granted balance first when both balances are available. Product prices may vary and DeepSeek reserves the right to adjust them. We recommend topping up based on your actual usage and regularly checking this page for the most recent pricing information. Previous Your First API Call Next Token & Token Usage Model Details Deduction Rules WeChat Official Account Community Email Discord Twitter More GitHub Copyright © 2026 DeepSeek, Inc."
+     "text": "For more details on concurrency limits, please refer to Rate Limit & Isolation ."
     }
    ],
    "changelog": [
@@ -460,7 +597,7 @@
     "urllib: HTTPError: HTTP Error 403: Forbidden",
     "curl: HTTP 403"
    ],
-   "attempted_at": "2026-09-12T08:44:51+00:00"
+   "attempted_at": "2026-10-05T22:21:05+00:00"
   },
   "google": {
    "name": "Google / Vertex",
@@ -479,6 +616,90 @@
   }
  },
  "events": [
+  {
+   "id": "anthropic-opus55-launch",
+   "vendor": "anthropic",
+   "family": "Claude Opus 5.5",
+   "kind": "new_generation_cut",
+   "title": "Opus 5.5 launches at $4/$20 — below the $5/$25 Opus tier",
+   "summary": "Claude Opus 5.5 appears on the pricing page at $4 input / $20 output per MTok, 20% below the $5/$25 that Opus 4.5 through Opus 5 still list. Its cache hits are priced at 0.05× input ($0.20) instead of the usual 0.1× — $0.50 on Opus 5 — and fast mode is $8/$40 versus $10/$50. Opus 5 stays on the page at its old price: this is a cheaper new generation, not a cut to an existing model. No launch date is published on the pages held here; Opus 5.5 is absent from the 2026-09-12 capture and was first seen on 2026-10-04. Sonnet 5.5 launched in the same window at $2/$10, the same price as Sonnet 5.",
+   "announced": null,
+   "observed": "2026-10-04",
+   "confirmed": "2026-10-06",
+   "effective": null,
+   "status": "active",
+   "old_value": "Opus tier $5 / $25 per MTok (Opus 4.5 through Opus 5); cache hit $0.50",
+   "new_value": "Opus 5.5 $4 / $20 per MTok; cache hit $0.20 (0.05× input); fast mode $8 / $40",
+   "evidence": [
+    {
+     "type": "capture",
+     "capture": "anthropic-docs-2026-10-06",
+     "quote": "On Claude Opus 5.5, a cache hit costs 5% of the standard input price ($0.20 USD per million tokens)."
+    },
+    {
+     "type": "capture",
+     "capture": "anthropic-docs-2026-10-06",
+     "quote": "Cache hits and refreshes on Claude Opus 5.5 are priced at 0.05x the base input price.",
+     "label": "footnote on the Opus 5.5 cache-hit price cell"
+    },
+    {
+     "type": "capture",
+     "capture": "claude-com-2026-10-06",
+     "quote": "Opus 5.5 Daily driver for agentic coding and enterprise work Prompt caching Read $0.20 / MTok Write $5 / MTok Input $4 / MTok Output $20 / MTok",
+     "label": "boundary page, same date"
+    },
+    {
+     "type": "values",
+     "capture": "anthropic-docs-2026-10-06",
+     "text": "Parsed from the pricing table at capture: Opus 5.5 input $4, output $20, 5-minute cache write $5, 1-hour write $8, cache hit $0.20 per MTok; Opus 5 on the same table: $5 / $25 / $6.25 / $10 / $0.50."
+    },
+    {
+     "type": "tracking_note",
+     "date": "2026-10-04",
+     "text": "Monitoring note: Opus 5.5 ($4/$20) and Sonnet 5.5 ($2/$10) first seen on the pricing page; neither is in the 2026-09-12 capture. The pricing table was re-laid out at the same time (new column order, model taglines, availability labels moved into icons)."
+    }
+   ],
+   "notes": [
+    "A cheaper successor is a different shape from a price cut: anyone pinned to Opus 5 keeps paying $5/$25 until they migrate."
+   ]
+  },
+  {
+   "id": "deepseek-peak-holiday-exclusion",
+   "vendor": "deepseek",
+   "family": "deepseek-flash / deepseek-v4-pro",
+   "kind": "schedule_change",
+   "title": "Peak schedule quietly amended — Chinese public holidays now off-peak",
+   "summary": "The footnote that defines DeepSeek's peak hours gained a clause: the weekday peak windows now exclude Chinese public holidays, which are off-peak in full. Rates and windows are unchanged. The change is not in the API changelog, and no change date is published: it happened between the 2026-09-12 and 2026-10-06 captures and was first noticed on 2026-10-04. On a holiday weekday inside a peak window, the same request now bills at the off-peak rate, which is half the peak rate.",
+   "announced": null,
+   "observed": "2026-10-04",
+   "confirmed": "2026-10-06",
+   "effective": null,
+   "status": "active",
+   "old_value": "peak 01:00–04:00 and 06:00–10:00 UTC, Monday through Friday; all other hours off-peak",
+   "new_value": "same windows, Monday through Friday excluding Chinese public holidays; those holidays off-peak in full",
+   "evidence": [
+    {
+     "type": "capture",
+     "capture": "deepseek-pricing-2026-09-12",
+     "quote": "Peak hours are 01:00 - 04:00 and 06:00 - 10:00 UTC, Monday through Friday (all other hours are off-peak).",
+     "label": "before — 2026-09-12 capture"
+    },
+    {
+     "type": "capture",
+     "capture": "deepseek-pricing-2026-10-06",
+     "quote": "Peak hours are 01:00 - 04:00 and 06:00 - 10:00 UTC, Monday through Friday, excluding Chinese public holidays. All other hours are off-peak, including weekends and Chinese public holidays in full.",
+     "label": "after — 2026-10-06 capture"
+    },
+    {
+     "type": "tracking_note",
+     "date": "2026-10-04",
+     "text": "Monitoring note: holiday exclusion first seen on the pricing page. The 2026-10-06 changelog capture contains no entry that mentions holidays."
+    }
+   ],
+   "notes": [
+    "The page does not list which dates count as Chinese public holidays, and this watch does not supply a holiday calendar."
+   ]
+  },
   {
    "id": "deepseek-v41-flash-cut",
    "vendor": "deepseek",
@@ -548,7 +769,18 @@
      "type": "capture",
      "capture": "deepseek-pricing-2026-09-12",
      "quote": "In response to user demand, we have decided to continue providing API services for DeepSeek V4 Pro after September 14, 2026",
-     "label": "same notice carried on the pricing page"
+     "label": "same notice carried on the pricing page (2026-09-12)"
+    },
+    {
+     "type": "capture",
+     "capture": "deepseek-updates-2026-10-06",
+     "quote": "In response to user demand, we have decided to continue providing API services for DeepSeek V4 Pro after September 14, 2026, with the billing method remaining unchanged.",
+     "label": "still in the API changelog at the 2026-10-06 capture"
+    },
+    {
+     "type": "tracking_note",
+     "date": "2026-10-04",
+     "text": "Monitoring note: the continuation notice no longer appears on the pricing page (absent from the 2026-10-06 capture, where the footnotes were renumbered). It remains in the changelog, and V4 Pro is still listed at unchanged rates."
     }
    ],
    "notes": [
@@ -580,6 +812,12 @@
      "capture": "anthropic-docs-2026-09-06",
      "quote": "The previously scheduled increase to $3/$15 per million input/output tokens on September 1, 2026 will not occur",
      "label": "earlier capture (2026-09-06), same text"
+    },
+    {
+     "type": "capture",
+     "capture": "anthropic-docs-2026-10-06",
+     "quote": "The $2/$10 per million input/output token pricing for Claude Sonnet 5, announced at launch as introductory pricing through August 31, 2026, is now the standard price. The previously scheduled increase to $3/$15 per million input/output tokens on September 1, 2026 will not occur.",
+     "label": "later capture (2026-10-06), same text — now a footnote on the Sonnet 5 price cell (shown as a popover), no longer a visible note above the table"
     },
     {
      "type": "capture",
@@ -615,7 +853,7 @@
      "type": "capture",
      "capture": "deepseek-pricing-2026-09-12",
      "quote": "Off-peak rates are half of the peak rates. Peak hours are 01:00 - 04:00 and 06:00 - 10:00 UTC, Monday through Friday (all other hours are off-peak).",
-     "label": "current schedule (still in effect at capture date)"
+     "label": "schedule as captured 2026-09-12 — later amended to exclude Chinese public holidays (see the schedule-change event)"
     },
     {
      "type": "tracking_note",
@@ -663,16 +901,16 @@
  "family_notes": [
   {
    "vendor": "anthropic",
-   "text": "Sonnet 5 ($2 / $10) is cheaper than the prior generation Sonnet 4.6 ($3 / $15) — the long-standing $3/$15 Sonnet tier is broken.",
+   "text": "Sonnet 5 and Sonnet 5.5 ($2 / $10) are cheaper than the prior generation Sonnet 4.6 ($3 / $15) — the long-standing $3/$15 Sonnet tier is broken.",
    "evidence": [
-    "anthropic-docs-2026-09-12"
+    "anthropic-docs-2026-10-06"
    ]
   },
   {
    "vendor": "anthropic",
-   "text": "Opus pricing fell across generations: the retired Opus 4.1 lists $15 / $75 versus $5 / $25 for Opus 4.5 through Opus 5 — roughly a 3× cut along the retirement path.",
+   "text": "Opus pricing fell across generations: the retired Opus 4.1 lists $15 / $75, Opus 4.5 through Opus 5 list $5 / $25, and Opus 5.5 lists $4 / $20 — a 3.75× cut from Opus 4.1 to Opus 5.5.",
    "evidence": [
-    "anthropic-docs-2026-09-12"
+    "anthropic-docs-2026-10-06"
    ]
   },
   {
@@ -697,8 +935,91 @@
    "source": "third-party coverage, as tracked in this watch's monitoring notes"
   }
  ],
+ "captures": [
+  {
+   "file": "data/raw/2026-09-06-platform.claude.com-pricing.html",
+   "date": "2026-09-06",
+   "sha256": "9f33544b11df3f0b2e5f82660caca5d901adf634d6b96cf4c22be0b56e70e6e9",
+   "bytes": 661909,
+   "ids": [
+    "anthropic-docs-2026-09-06"
+   ]
+  },
+  {
+   "file": "data/raw/2026-09-12-api-docs.deepseek.com-pricing.html",
+   "date": "2026-09-12",
+   "sha256": "755aa9b488d1185cba016ca4de3b3b6b8f593f5e13e5f9f961305289a5c8d242",
+   "bytes": 23359,
+   "ids": [
+    "deepseek-pricing-2026-09-12"
+   ]
+  },
+  {
+   "file": "data/raw/2026-09-12-api-docs.deepseek.com-updates.html",
+   "date": "2026-09-12",
+   "sha256": "da7f5c4919ed8874ff575dc1c7c91da36e5b141a1b17b43309f3d75156469185",
+   "bytes": 50934,
+   "ids": [
+    "deepseek-updates-2026-09-12"
+   ]
+  },
+  {
+   "file": "data/raw/2026-09-12-claude.com-pricing.html",
+   "date": "2026-09-12",
+   "sha256": "491d3a818a078febd11c582d0cdfb6f3235390ff54ba7e468f4d885fe1ad7396",
+   "bytes": 1147265,
+   "ids": [
+    "claude-com-2026-09-12"
+   ]
+  },
+  {
+   "file": "data/raw/2026-09-12-platform.claude.com-pricing.html",
+   "date": "2026-09-12",
+   "sha256": "8654269457c3b210b098a06091f6131f2e169f2d9973a9f9dd2ce28b1dceb898",
+   "bytes": 564429,
+   "ids": [
+    "anthropic-docs-2026-09-12"
+   ]
+  },
+  {
+   "file": "data/raw/2026-10-06-api-docs.deepseek.com-pricing.html",
+   "date": "2026-10-06",
+   "sha256": "210f102275ccf1a6542f08a3bc9e4b4c7c83278cb74b35217bffa112df6363b2",
+   "bytes": 23982,
+   "ids": [
+    "deepseek-pricing-2026-10-06"
+   ]
+  },
+  {
+   "file": "data/raw/2026-10-06-api-docs.deepseek.com-updates.html",
+   "date": "2026-10-06",
+   "sha256": "2922113bc4e0e970fa6d3c4065c3cff3ec661a4db03d671cc2310545c5b5bb71",
+   "bytes": 48079,
+   "ids": [
+    "deepseek-updates-2026-10-06"
+   ]
+  },
+  {
+   "file": "data/raw/2026-10-06-claude.com-pricing.html",
+   "date": "2026-10-06",
+   "sha256": "440edc72f87b1f71ab9682952691694485bb761b13d9cd58e69083a9e31a6ced",
+   "bytes": 1187346,
+   "ids": [
+    "claude-com-2026-10-06"
+   ]
+  },
+  {
+   "file": "data/raw/2026-10-06-platform.claude.com-pricing.html",
+   "date": "2026-10-06",
+   "sha256": "aac51c84ae78c433b9c50c52472b50633fcff5ebf8154128bc0d375a1e6bcc61",
+   "bytes": 868587,
+   "ids": [
+    "anthropic-docs-2026-10-06"
+   ]
+  }
+ ],
  "quote_verification": {
-  "checked": 10,
+  "checked": 17,
   "failures": 0
  }
 }

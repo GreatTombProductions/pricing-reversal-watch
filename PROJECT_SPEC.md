@@ -1,6 +1,6 @@
 # Pricing-Reversal Watch — Project Spec
 
-**Status:** built and released 2026-09-12.
+**Status:** built and released 2026-09-12; refreshed 2026-10-06 (captures re-pinned, label-mapped Anthropic parser that fails closed, popover-note extraction, capture catalog, two new events).
 **Sibling family:** Model Lifecycle Watch, Notice-Policy Check, Model Release Status Verifier, API Rate-Window Clock.
 
 ## The tool, in one sentence

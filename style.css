@@ -148,6 +148,7 @@ details summary { cursor: pointer; color: var(--text-faint); font-size: 0.84rem;
 
 .site-footer { max-width: 1020px; margin: 40px auto 0; padding: 20px; border-top: 1px solid var(--border); color: var(--text-faint); font-size: 0.84rem; }
 .load-error { color: var(--bad); padding: 20px; }
+.mono-hint { font-family: var(--mono); }
 
 @media (max-width: 620px) {
   .values { grid-template-columns: 1fr; }

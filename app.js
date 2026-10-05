@@ -7,6 +7,8 @@ const KIND_LABELS = {
   scheduled_increase_executed: { label: "increase executed", cls: "up" },
   continuation_notice: { label: "continuation notice", cls: "notice" },
   intro_pricing: { label: "intro pricing", cls: "intro" },
+  new_generation_cut: { label: "cheaper new generation", cls: "cut" },
+  schedule_change: { label: "schedule change", cls: "notice" },
 };
 
 const STATUS_LABELS = {
@@ -122,11 +124,9 @@ function renderAnthropic(v, receiptsById) {
   ]);
   modelsTable.append(head);
   for (const m of v.models) {
-    const flags = [];
-    if (m.limited) flags.push("limited availability");
-    if (m.retired_note) flags.push(m.retired_note);
+    const flags = m.flags || [];
     modelsTable.append(
-      el("tr", { class: m.retired_note ? "retired" : "" }, [
+      el("tr", { class: m.retired ? "retired" : "" }, [
         el("td", { text: m.name }),
         el("td", { class: "num", text: money(m.input) }),
         el("td", { class: "num", text: money(m.output) }),
@@ -140,8 +140,8 @@ function renderAnthropic(v, receiptsById) {
   for (const c of v.callouts_featured) {
     calloutHost.append(
       el("div", { class: "featured-callout" }, [
-        el("p", { class: "quote", text: "“" + c + "”" }),
-        el("p", { class: "evidence-meta", text: "vendor note on the captured pricing page" }),
+        el("p", { class: "quote", text: "“" + c.text + "”" }),
+        el("p", { class: "evidence-meta", text: "vendor wording — " + c.where }),
       ])
     );
   }
@@ -247,7 +247,12 @@ async function main() {
     return;
   }
 
+  // Every committed capture is linkable (older evidence included); the latest
+  // fetch receipts overlay their own entries with full timestamps.
   const receiptsById = {};
+  for (const c of data.captures || []) {
+    for (const id of c.ids) receiptsById[id] = { file: c.file, sha256: c.sha256, captured_at: c.date };
+  }
   for (const r of data.receipts) if (r.capture_id) receiptsById[r.capture_id] = r;
 
   if (document.body.dataset.page === "sources") {

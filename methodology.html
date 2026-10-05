@@ -31,6 +31,8 @@
       <ul class="plain-list notes">
         <li><strong>Captures.</strong> Each monitored page is fetched at build time, saved raw, and pinned by a SHA-256 receipt. Capture files are published alongside this site so any quote can be re-checked against its source. Pages that change per request carry no stable hash promise — the receipt identifies the exact fetch, not a forever-identity.</li>
         <li><strong>Monitoring notes.</strong> Dated observations recorded while tracking the pages (e.g., "rate basis as of 2026-08-31"). They carry dates and are labeled as notes — never presented as vendor quotes.</li>
+        <li><strong>Popover notes.</strong> Some vendor wording appears only in popovers — a footnote on a price cell, or a model's status note. It is on the page a reader sees, so it counts as captured page text, and each quote's label says where it appears.</li>
+        <li><strong>Layout changes stop the build.</strong> Price tables are read by column label, never by position. If a vendor re-lays out a table and an expected label disappears, the build fails rather than publishing a price from the wrong column.</li>
         <li><strong>Provisional items.</strong> Where a vendor's pages cannot be captured, third-party reports are listed as provisional and labeled — never as vendor-verified.</li>
       </ul>
     </section>
